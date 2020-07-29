@@ -1,0 +1,9 @@
+.pytest_cache/
+Include/
+allure-results/
+Chromedriver/
+Lib/
+Scripts/
+failures
+pyvenv.cfg
+__pycache__/

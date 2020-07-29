@@ -1,0 +1,30 @@
+import time
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+import allure
+
+class homepageObjects:
+
+    valid_login_header = (By.XPATH, "//h2[contains(text(),'Welcome')]")
+    valid_login_usermenu = (By.XPATH, "//div[@class='user-toggle']/div")
+    signout = (By.XPATH, "//span[text()='Sign out']")
+
+    def __init__(self, browser):
+        self.browser = browser
+
+    @allure.step('Checking valid login user name in header')
+    def check_valid_login_header(self):
+        return self.browser.find_element(*self.valid_login_header).text
+
+    @allure.step('Checking valid login user name in user menu')
+    def check_valid_login_usermenu(self):
+        return self.browser.find_element(*self.valid_login_usermenu).text
+
+    @allure.step('Logging out current user')
+    def logout(self):
+        self.browser.find_element(*self.valid_login_usermenu).click()
+        self.browser.find_element(*self.signout).click()
