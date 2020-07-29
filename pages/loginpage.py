@@ -17,9 +17,9 @@ class loginpageObjects:
     in this class for homepage
     """
 
-    URL = "https://test-virtual.easyreg.ca/"
-    input_email = (By.XPATH, "//input[@id='registrations_email']")
-    input_regcode = (By.XPATH, "//input[@id='registrations_code']")
+    URL = "https://test-exhibitors.easyreg.ca/"
+    input_email = (By.XPATH, "//*[@id='exhibitor_email']")
+    input_regcode = (By.XPATH, "//*[@id='exhibitor_code']")
     button_signin = (By.XPATH, "//button[text()='Sign in']")
     invalid_login_alert = (By.XPATH, "//div[contains(@class,'alert-danger')]")
 

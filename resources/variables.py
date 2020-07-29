@@ -13,6 +13,6 @@ by the test cases.
 
 invalid_email = "abc@xyz.com"
 invalid_regcode = "REGCODE"
-valid_email = "pd@surreyteachers.org"
-valid_regcode = "RLSFACE"
+valid_email = "martin@easyreg.ca"
+valid_regcode = "XFERTYN12"
 valid_username = "Erin Coleman"

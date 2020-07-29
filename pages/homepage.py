@@ -12,6 +12,7 @@ class homepageObjects:
     valid_login_header = (By.XPATH, "//h2[contains(text(),'Welcome')]")
     valid_login_usermenu = (By.XPATH, "//div[@class='user-toggle']/div")
     signout = (By.XPATH, "//span[text()='Sign out']")
+    video_play = (By.XPATH,"//*[@id='player']/div[7]/div[3]/button")
 
     def __init__(self, browser):
         self.browser = browser
@@ -24,7 +25,14 @@ class homepageObjects:
     def check_valid_login_usermenu(self):
         return self.browser.find_element(*self.valid_login_usermenu).text
 
+    @allure.step('Checking if video works when played')
+    def check_valid_video(self):
+        self.browser.find_element(*self.video_play).click()
+        time.sleep(3)
+
+
     @allure.step('Logging out current user')
     def logout(self):
         self.browser.find_element(*self.valid_login_usermenu).click()
         self.browser.find_element(*self.signout).click()
+
