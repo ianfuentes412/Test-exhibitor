@@ -10,9 +10,9 @@ import allure
 class homepageObjects:
 
     valid_login_header = (By.XPATH, "//h2[contains(text(),'Welcome')]")
-    valid_login_usermenu = (By.XPATH, "//div[@class='user-toggle']/div")
+    valid_login_usermenu = (By.XPATH, "//a[@class='dropdown-toggle']")
     signout = (By.XPATH, "//span[text()='Sign out']")
-    video_play = (By.XPATH,"//*[@id='player']/div[7]/div[3]/button")
+    video_play = (By.XPATH, "//*[@id='player']/div[7]/div[3]/button")
 
     def __init__(self, browser):
         self.browser = browser
