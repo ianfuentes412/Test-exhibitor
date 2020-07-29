@@ -28,7 +28,7 @@ def test_login_valid(browser):
     login_page.enter_email(valid_email)
     login_page.enter_regcode(valid_regcode)
     login_page.click_signin()
-    assert valid_username in home_page.check_valid_login_header(), "Valid login probably failed or wrong username found after login"
+    assert "Welcome" in home_page.check_valid_login_header(), "Valid login probably failed or wrong username found after login"
     assert valid_username in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
