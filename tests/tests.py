@@ -44,6 +44,12 @@ def test_help_page(browser):
     help_page.enter_help()
     help_page.click_dropdown1()
     help_page.check_dropdown1()
+    help_page.click_dropdown2()
+    help_page.check_dropdown2()
+    help_page.click_dropdown3()
+    help_page.check_dropdown3()
+    help_page.click_dropdown4()
+    help_page.check_dropdown4()
     assert True
 
 
