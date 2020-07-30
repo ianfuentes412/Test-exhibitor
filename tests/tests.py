@@ -43,7 +43,7 @@ def test_help_page(browser):
     help_page = helpObjects(browser)
     help_page.enter_help()
     help_page.click_dropdown1()
-    help_page.check_dropdown1
+    help_page.check_dropdown1()
     assert True
 
 
