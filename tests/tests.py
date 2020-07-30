@@ -2,6 +2,7 @@
 import time, allure
 from pages.loginpage import loginpageObjects
 from pages.homepage import homepageObjects
+from pages.test_help import helpObjects
 from resources.variables import *
 
 @allure.title('To check if login page loads and all elements present')
@@ -36,6 +37,13 @@ def test_home_video(browser):
     home_page = homepageObjects(browser)
     home_page.check_valid_video()
     assert True
+
+@allure.title('Checking Help Screen')
+def test_help_page(browser):
+    help_page = helpObjects(browser)
+    help_page.enter_help()
+    assert True
+
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
