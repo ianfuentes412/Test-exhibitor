@@ -31,6 +31,12 @@ def test_login_valid(browser):
     assert "Welcome" in home_page.check_valid_login_header(), "Valid login probably failed or wrong username found after login"
     assert valid_username in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
 
+@allure.title('Checking if the video works when clicked')
+def check_home_video(browser):
+    home_page = homepageObjects(browser)
+    home_page.check_valid_video()
+    assert True
+
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
 #     login_page = loginpageObjects(browser)
@@ -43,8 +49,4 @@ def test_login_valid(browser):
 #     assert "Sandeep Kumar" in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
 
 
-@allure.title('Checking if the video works when clicked')
-def check_home_video(browser):
-    home_page = homepageObjects(browser)
-    home_page.check_valid_video()
-    assert True
+
