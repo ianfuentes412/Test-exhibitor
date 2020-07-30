@@ -27,8 +27,11 @@ class homepageObjects:
 
     @allure.step('Checking if video works when played')
     def check_valid_video(self):
-        self.browser.find_element(*self.video_play).click()
-        time.sleep(3)
+        try:
+            self.browser.find_element(*self.video_play)
+            return True
+        except:
+            return False
 
 
     @allure.step('Logging out current user')
