@@ -12,7 +12,7 @@ class announceObjects:
     ann_editbtn = (By.XPATH, "//*[@id='edit10']")
     ann_edittxtbox = (By.XPATH, "//*[@id='announcement_text']")
     ann_savebtn = (By.XPATH, "//*[@id='update']")
-    announcetype= (By.XPATH, "//*[@id='announcement_type_warning']")
+    announcetype= (By.XPATH, "//*[@id='formupdate']/div[2]/div[2]/label")
     loaded_ann = (By.XPATH, "//h2[text()='Announcements']")
 
     def __init__(self,browser):
