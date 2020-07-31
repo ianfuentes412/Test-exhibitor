@@ -19,3 +19,8 @@ valid_username = "Marty Voel"
 
 #Anouncement
 demo_announce = "This is a dummy annoucement that this website is working! Thank you for using this website!"
+
+#Banner
+title = "DemoAdd"
+link = "https://google.ca"
+banner = "/resources/banner.jpg"

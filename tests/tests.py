@@ -4,6 +4,7 @@ from pages.loginpage import loginpageObjects
 from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
+from pages.test_banner import bannerObjects
 from resources.variables import *
 
 @allure.title('To check if login page loads and all elements present')
@@ -61,6 +62,23 @@ def test_announcement_page(browser):
     announce_page.edit_announcement(demo_announce)
     announce_page.announce_type()
     announce_page.savenew_announcement()
+
+@allure.title('Checking Banner Tab')
+def test_banner_page(browser):
+    banner_page = bannerObjects(browser)
+    banner_page.enter_banner()
+    banner_page.check_ban_load()
+    banner_page.check_button_signin()
+    banner_page.add_banner()
+    banner_page.check_title_text()
+    banner_page.check_link_text()
+    banner_page.edit_title_text(title)
+    banner_page.edit_link_text(link)
+    banner_page.add_banner(banner)
+    banner_page.save_banner_btn()
+    banner_page.check_newbanner()
+    banner_page.delete_banner_btn()
+    banner_page.check_deleted_banner()
 
 
 
