@@ -30,33 +30,33 @@ class helpObjects:
     def check_dropdown1(self):
         try:
             self.browser.find_element(*self.find_test1).text
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Checking Title 2')
     def check_dropdown2(self):
         try:
             self.browser.find_element(*self.find_test2).text
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Checking Title 3')
     def check_dropdown3(self):
         try:
             self.browser.find_element(*self.find_test3).text
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Checking Title 4')
     def check_dropdown4(self):
         try:
             self.browser.find_element(*self.find_test4).text
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Checking if dropdown 1 works')
     def click_dropdown1(self):

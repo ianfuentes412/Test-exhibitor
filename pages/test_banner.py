@@ -29,17 +29,17 @@ class bannerObjects:
     def check_ban_load(self):
         try:
             self.browser.find_element(*self.check_loadbanner)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Checking if Add Banner button exists')
     def check_button_signin(self):
         try:
             self.browser.find_element(*self.add_btn)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Click Add Banner')
     def add_banner(self):
@@ -49,17 +49,17 @@ class bannerObjects:
     def check_title_text(self):
         try:
             self.browser.find_element(*self.title_textbox)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Check if Link Text Box Exists')
     def check_link_text(self):
         try:
             self.browser.find_element(*self.link_textbox)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Enter New Title in Textbox')
     def edit_title_text(self, title):
@@ -83,9 +83,9 @@ class bannerObjects:
     def check_new_banner(self):
         try:
             self.browser.find_element(*self.check_newbanner)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
     @allure.step('Click Delete Button')
     def delete_banner_btn(self):
@@ -95,6 +95,6 @@ class bannerObjects:
     def check_deleted_banner(self):
         try:
             self.browser.find_element(*self.check_newbanner)
-            return False
+            assert False
         except:
-            return True
+            assert True

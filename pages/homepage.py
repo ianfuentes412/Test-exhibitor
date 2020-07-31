@@ -29,9 +29,9 @@ class homepageObjects:
     def check_valid_video(self):
         try:
             self.browser.find_element(*self.video_play)
-            return True
+            assert True
         except:
-            return False
+            assert False
 
 
     @allure.step('Logging out current user')

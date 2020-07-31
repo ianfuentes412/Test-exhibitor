@@ -19,6 +19,7 @@ valid_username = "Marty Voel"
 
 #Anouncement
 demo_announce = "This is a dummy annoucement that this website is working! Thank you for using this website!"
+demo2_announce = "This is an edited dummy announcement to show the edit button is working!"
 
 #Banner
 title = "DemoAdd"
