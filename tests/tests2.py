@@ -1,7 +1,9 @@
+
 import time, allure
 from pages.loginpage import loginpageObjects
 from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
+from pages.test_announce import announceObjects
 from resources.variables import *
 
 @allure.title('To check if login page loads and all elements present')
