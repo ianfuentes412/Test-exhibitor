@@ -1,9 +1,7 @@
-
 import time, allure
 from pages.loginpage import loginpageObjects
 from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
-from pages.test_announce import announceObjects
 from resources.variables import *
 
 @allure.title('To check if login page loads and all elements present')
@@ -38,44 +36,3 @@ def test_home_video(browser):
     home_page = homepageObjects(browser)
     home_page.check_valid_video()
     assert True
-
-@allure.title('Checking if Help Screen Elements are Present')
-def test_help_page(browser):
-    help_page = helpObjects(browser)
-    help_page.enter_help()
-    help_page.click_dropdown1()
-    help_page.check_dropdown1()
-    help_page.click_dropdown2()
-    help_page.check_dropdown2()
-    help_page.click_dropdown3()
-    help_page.check_dropdown3()
-    help_page.click_dropdown4()
-    help_page.check_dropdown4()
-
-@allure.title('Checking Announcements Tab')
-def test_announcement_page(browser):
-    announce_page = announceObjects(browser)
-    announce_page.enter_announce()
-    announce_page.check_announce_load()
-    announce_page.click_ann_edit()
-    announce_page.edit_announcement()
-    announce_page.announce_type()
-    announce_page.savenew_announcement()
-
-
-
-
-
-# @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
-# def test_login_valid_failed(browser):
-#     login_page = loginpageObjects(browser)
-#     home_page = homepageObjects(browser)
-#     home_page.logout()
-#     login_page.enter_email(valid_email)
-#     login_page.enter_regcode(valid_regcode)
-#     login_page.click_signin()
-#     assert "Sandeep Kumar" in home_page.check_valid_login_header(), "Valid login probably failed or wrong username found after login"
-#     assert "Sandeep Kumar" in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
-
-
-
