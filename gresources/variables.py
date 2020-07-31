@@ -23,4 +23,4 @@ demo_announce = "This is a dummy annoucement that this website is working! Thank
 #Banner
 title = "DemoAdd"
 link = "https://google.ca"
-banner = "/resources/banner.jpg"
+banner = '\gresources\gbanner.jpg'
