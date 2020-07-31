@@ -58,7 +58,7 @@ def test_announcement_page(browser):
     announce_page.enter_announce()
     announce_page.check_announce_load()
     announce_page.click_ann_edit()
-    announce_page.edit_announcement()
+    announce_page.edit_announcement(demo_announce)
     announce_page.announce_type()
     announce_page.savenew_announcement()
 

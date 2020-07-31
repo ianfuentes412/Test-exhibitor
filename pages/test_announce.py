@@ -35,9 +35,9 @@ class announceObjects:
         self.browser.find_element(*self.ann_editbtn).click()
 
     @allure.step('Enter New Announcement in Textbox')
-    def edit_announcement(self, demo_announce):
+    def edit_announcement(self, ann_change):
         self.browser.find_element(*self.ann_edittxtbox).clear()
-        self.browser.find_element(*self.ann_edittxtbox).send_keys(demo_announce)
+        self.browser.find_element(*self.ann_edittxtbox).send_keys(ann_change)
 
     @allure.step('Saving the New Announcement')
     def savenew_announcement(self):
