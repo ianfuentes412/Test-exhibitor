@@ -5,7 +5,7 @@ from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
-from gresources.variables import *
+from resources.variables import *
 #heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
 def test_loginpage_elements(browser):
@@ -60,7 +60,7 @@ def test_announcement_page(browser):
     announce_page.check_announce_load()
     announce_page.click_add_ann()
     announce_page.edit_announcement(demo_announce)
-    announce_page.announce_type()
+    #announce_page.announce_type()
     announce_page.savenew_announcement()
     announce_page.check_change()
     announce_page.click_ann_edit()

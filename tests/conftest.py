@@ -13,7 +13,7 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 
 
-CONFIG_PATH = 'gresources/config.json'
+CONFIG_PATH = 'resources/config.json'
 DEFAULT_WAIT_TIME = 10
 SUPPORTED_BROWSERS = ['chrome']
 chromedriver_path = 'Chromedriver/chromedriver.exe'
