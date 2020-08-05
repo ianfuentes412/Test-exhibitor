@@ -12,8 +12,9 @@ class announceObjects:
     ann_add_ann = (By.XPATH, "//*[@id='addbutton']")
     ann_editbtn = (By.XPATH, "//*[@id='edit10']")
     ann_edittxtbox = (By.XPATH, "//*[@id='announcement_text']")
-    ann_savebtn = (By.XPATH, "//*[@id='update']")
-    announcetype= (By.XPATH, "//*[@id='formupdate']/div[2]/div[2]/label")
+    ann_savebtn = (By.XPATH, "//*[@id='save']")
+    ann_updatebtn=(By.XPATH, "//*[@id='update'")
+    announcetype= (By.XPATH, "//*[@id='announcement_type_info']")
     loaded_ann = (By.XPATH, "//h2[text()='Announcements']")
     del_ann=(By.XPATH, "//a[@text()='Delete']")
     check_change = (By.XPATH, "//*[contains('Thank')]")
@@ -59,6 +60,10 @@ class announceObjects:
     def edit_announcement(self, ann_change):
         self.browser.find_element(*self.ann_edittxtbox).clear()
         self.browser.find_element(*self.ann_edittxtbox).send_keys(ann_change)
+
+    @allure.step('Saving the Updated Announcement')
+    def saveupdated_announcement(self):
+        self.browser.find_element(*self.ann_updatebtn).click()
 
     @allure.step('Click the Delete Announcement Button')
     def delete_ann(self):
