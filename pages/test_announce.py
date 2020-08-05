@@ -9,7 +9,7 @@ import allure
 
 class announceObjects:
     ann_btn = (By.XPATH, "//*[@id='menu_announcements']/a")
-    ann_add_ann = "/html/body/div[2]/div/div/div[2]/div/div/div[2]/div[1]/div/a"
+    ann_add_ann = (By.XPATH, "//*[@id='addbutton']")
     ann_editbtn = (By.XPATH, "//*[@id='edit10']")
     ann_edittxtbox = (By.XPATH, "//*[@id='announcement_text']")
     ann_savebtn = (By.XPATH, "//*[@id='update']")
