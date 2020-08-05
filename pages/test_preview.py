@@ -35,7 +35,23 @@ class previewObjects:
     @allure.step('Checking Preview Element')
     def check_book_element1(self):
         try:
-            self.browser.find_element(*self.entrytest1).text
+            self.browser.find_element(*self.entrytest1)
+            assert True
+        except:
+            assert False
+
+    @allure.step('Checking if Chat Button Exists')
+    def check_chat_btn(self):
+        try:
+            self.browser.find_element(*self.previewchat)
+            assert True
+        except:
+            assert False
+
+    @allure.step('Checking if Appointment Button Exists')
+    def check_appoint_btn(self):
+        try:
+            self.browser.find_element(*self.previewappoint)
             assert True
         except:
             assert False
