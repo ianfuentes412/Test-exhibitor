@@ -6,7 +6,7 @@ from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
 from gresources.variables import *
-
+#heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
 def test_loginpage_elements(browser):
     login_page = loginpageObjects(browser)
