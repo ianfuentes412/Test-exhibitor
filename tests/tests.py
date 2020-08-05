@@ -5,6 +5,7 @@ from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
+from pages.test_preview import previewObjects
 from resources.variables import *
 #heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
@@ -87,6 +88,12 @@ def test_banner_page(browser):
     banner_page.delete_banner_btn()
     banner_page.check_deleted_banner()
 
+@allure.title('Checking Preview Tab')
+def test_preview_page(browser):
+    preview_page = previewObjects(browser)
+    preview_page.enter_preview()
+    preview_page.check_preview_loaded()
+    preview_page.check_book_element1()
 
 
 

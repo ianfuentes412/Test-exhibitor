@@ -7,10 +7,35 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import allure
 
-class helpObjects:
+class previewObjects:
 
     preview_btn = (By.XPATH, "//*[@id='menu_preview']/a")
     preview_test = (By.XPATH, "//*[@id='company']")
     previewchat = (By.XPATH, "//*[@id='chat']")
     previewappoint=(By.XPATH, "//*[@id='appointment']")
     entrytest1=(By.XPATH,"//a[@text()='Business and Professional Communication']")
+    entrytest2=(By.XPATH,"//a[@text()='Business Communication NOW']")
+    entrytest2=(By.XPATH,"//a[@text()='ISE Business Communication: Developing Leaders for a Networked World']")
+
+    def __init__(self,browser):
+        self.browser = browser
+
+    @allure.step('Enter Help Through Home Page')
+    def enter_preview(self):
+        self.browser.find_element(*self.preview_btn).click()
+
+    @allure.step('Checking Preview Page Loaded')
+    def check_preview_loaded(self):
+        try:
+            self.browser.find_element(*self.preview_test).text
+            assert True
+        except:
+            assert False
+
+    @allure.step('Checking Preview Element')
+    def check_book_element1(self):
+        try:
+            self.browser.find_element(*self.entrytest1).text
+            assert True
+        except:
+            assert False
