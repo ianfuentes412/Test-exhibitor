@@ -19,7 +19,7 @@ class announceObjects:
     loaded_ann = (By.XPATH, "//h2[text()='Announcements']")
     del_ann=(By.XPATH, "//a[@text()='Delete']")
     check_change = (By.XPATH, "//*[@id='oneannouncement']")
-    check_change2 = (By.XPATH, "//*[contains('dummy')]")
+    check_change2 = (By.XPATH, "//*[@id='successmessage']")
 
     def __init__(self,browser):
         self.browser = browser
@@ -71,7 +71,7 @@ class announceObjects:
         self.browser.find_element(*self.del_ann).click()
 
 
-    @allure.step('Check if Announcement is changed')
+    @allure.step('Check if Announcement is added')
     def check_ann_change(self):
         try:
             self.browser.find_element(*self.check_change)
