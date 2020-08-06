@@ -1,6 +1,7 @@
 import time
 
 from selenium.webdriver.common.by import By
+from resources.variables import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
@@ -85,3 +86,13 @@ class announceObjects:
             assert True
         except:
             assert False
+
+    @allure.step('Adds a new Announcement')
+    def add_new_announce(self):
+        if self.browser.find_element(*self.ann_add_ann):
+
+            self.click_add_ann()
+            self.edit_announcement(demo_announce)
+            self.announce_type()
+            self.savenew_announcement()
+            self.check_ann_change()
