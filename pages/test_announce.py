@@ -18,7 +18,7 @@ class announceObjects:
     announcetype= (By.XPATH, "//*[@id='formnew']/div[2]/div[1]/label")
     loaded_ann = (By.XPATH, "//h2[text()='Announcements']")
     del_ann=(By.XPATH, "//a[@text()='Delete']")
-    check_change = (By.XPATH, "//*[contains(@name,'Thank')]")
+    check_change = (By.XPATH, "//*[@id='oneannouncement']")
     check_change2 = (By.XPATH, "//*[contains('dummy')]")
 
     def __init__(self,browser):
