@@ -91,8 +91,7 @@ class announceObjects:
     @allure.step('Adds a new Announcement')
     def add_new_announce(self):
         try:
-            elem = self.browser.find_elements(*self.ann_add_ann)
-            if elem.is_displayed():
+            if self.browser.find_elements(*self.ann_add_ann):
 
                 self.click_add_ann()
                 self.edit_announcement(demo_announce)
