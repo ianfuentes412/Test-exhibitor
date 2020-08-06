@@ -11,7 +11,7 @@ import allure
 class announceObjects:
     ann_btn = (By.XPATH, "//*[@id='menu_announcements']/a")
     ann_add_ann = (By.XPATH, "//*[@id='addbutton']")
-    ann_editbtn = (By.XPATH, "//*[@id='edit10']")
+    ann_editbtn = (By.XPATH, "//*[@class='btn btn-primary mr-2']")
     ann_edittxtbox = (By.XPATH, "//*[@id='announcement_text']")
     ann_savebtn = (By.XPATH, "//*[@id='save']")
     ann_updatebtn=(By.XPATH, "//*[@id='update'")
