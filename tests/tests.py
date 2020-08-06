@@ -85,12 +85,12 @@ def test_announcement_page(browser):
     #banner_page.delete_banner_btn()
     #banner_page.check_deleted_banner()
 
-#@allure.title('Checking Preview Tab')
-#def test_preview_page(browser):
-    #preview_page = previewObjects(browser)
-    #preview_page.enter_preview()
-    #preview_page.check_preview_loaded()
-    #preview_page.check_book_element1()
+@allure.title('Checking Preview Tab')
+def test_preview_page(browser):
+    preview_page = previewObjects(browser)
+    preview_page.enter_preview()
+    preview_page.check_preview_loaded()
+    preview_page.check_book_element1()
 
 
 
