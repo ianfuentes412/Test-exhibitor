@@ -89,10 +89,11 @@ class announceObjects:
 
     @allure.step('Adds a new Announcement')
     def add_new_announce(self):
-        if self.browser.find_element(*self.ann_add_ann):
+        if self.browser.find_elements(*self.ann_add_ann):
 
             self.click_add_ann()
             self.edit_announcement(demo_announce)
             self.announce_type()
             self.savenew_announcement()
             self.check_ann_change()
+
