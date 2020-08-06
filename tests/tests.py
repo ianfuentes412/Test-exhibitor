@@ -71,29 +71,29 @@ def test_announcement_page(browser):
     announce_page.check_change2()
     announce_page.del_ann()
 
-@allure.title('Checking Banner Tab')
-def test_banner_page(browser):
-    banner_page = bannerObjects(browser)
-    banner_page.enter_banner()
-    banner_page.check_ban_load()
-    banner_page.check_button_signin()
-    banner_page.add_banner()
-    banner_page.check_title_text()
-    banner_page.check_link_text()
-    banner_page.edit_title_text(title)
-    banner_page.edit_link_text(link)
-    banner_page.add_new_image(banner)
-    banner_page.save_banner_btn()
-    banner_page.check_newbanner()
-    banner_page.delete_banner_btn()
-    banner_page.check_deleted_banner()
+#@allure.title('Checking Banner Tab')
+#def test_banner_page(browser):
+    #banner_page = bannerObjects(browser)
+    #banner_page.enter_banner()
+    #banner_page.check_ban_load()
+    #banner_page.check_button_signin()
+    #banner_page.add_banner()
+    #banner_page.check_title_text()
+    #banner_page.check_link_text()
+    #banner_page.edit_title_text(title)
+    #banner_page.edit_link_text(link)
+    #banner_page.add_new_image(banner)
+    #banner_page.save_banner_btn()
+    #banner_page.check_newbanner()
+    #banner_page.delete_banner_btn()
+    #banner_page.check_deleted_banner()
 
-@allure.title('Checking Preview Tab')
-def test_preview_page(browser):
-    preview_page = previewObjects(browser)
-    preview_page.enter_preview()
-    preview_page.check_preview_loaded()
-    preview_page.check_book_element1()
+#@allure.title('Checking Preview Tab')
+#def test_preview_page(browser):
+    #preview_page = previewObjects(browser)
+    #preview_page.enter_preview()
+    #preview_page.check_preview_loaded()
+    #preview_page.check_book_element1()
 
 
 
