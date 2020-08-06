@@ -18,7 +18,7 @@ class announceObjects:
     ann_updatebtn=(By.XPATH, "//*[@id='update']")
     announcetype= (By.XPATH, "//*[@id='formnew']/div[2]/div[1]/label")
     loaded_ann = (By.XPATH, "//h2[text()='Announcements']")
-    del_ann= (By.XPATH, "//*[@class='btn btn-primary']")
+    del_ann = (By.XPATH, "//*[@class='btn btn-primary']")
     check_change = (By.XPATH, "//*[@id='oneannouncement']")
     check_change2 = (By.XPATH, "//*[@id='successmessage']")
 

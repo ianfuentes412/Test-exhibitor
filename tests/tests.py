@@ -66,7 +66,7 @@ def test_announcement_page(browser):
     announce_page.edit_announcement(demo2_announce)
     announce_page.saveupdated_announcement()
     announce_page.check_ann_change2()
-    announce_page.del_ann()
+    announce_page.delete_ann()
 
 #@allure.title('Checking Banner Tab')
 #def test_banner_page(browser):
