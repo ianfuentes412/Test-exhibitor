@@ -1,5 +1,6 @@
 import time
 
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from resources.variables import *
 from selenium.webdriver.support.ui import WebDriverWait
@@ -89,11 +90,14 @@ class announceObjects:
 
     @allure.step('Adds a new Announcement')
     def add_new_announce(self):
-        if self.browser.find_elements(*self.ann_add_ann):
+        try:
+            elem = self.browser.find_elements(*self.ann_add_ann)
+            if elem.is_displayed():
 
-            self.click_add_ann()
-            self.edit_announcement(demo_announce)
-            self.announce_type()
-            self.savenew_announcement()
-            self.check_ann_change()
-
+                self.click_add_ann()
+                self.edit_announcement(demo_announce)
+                self.announce_type()
+                self.savenew_announcement()
+                self.check_ann_change()
+        except NoSuchElementException:
+                print("Announcement already done")
