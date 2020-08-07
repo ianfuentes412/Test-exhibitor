@@ -66,14 +66,14 @@ class bannerObjects:
         self.browser.find_element(*self.title_textbox).clear()
         self.browser.find_element(*self.title_textbox).send_keys(title)
 
-    @allure.step('Enter New Title in Textbox')
+    @allure.step('Enter New Links in Textbox')
     def edit_link_text(self, links):
         self.browser.find_element(*self.link_textbox).clear()
         self.browser.find_element(*self.link_textbox).send_keys(links)
 
     @allure.step('Enter Image')
-    def add_new_image(self, images):
-        self.browser.find_element(*self.banner_upload).send_keys(images)
+    def add_new_image(self, banner):
+        self.browser.find_element(*self.banner_upload).send_keys(banner)
 
     @allure.step('Click Save Button')
     def save_banner_btn(self):
