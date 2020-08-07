@@ -9,7 +9,14 @@ import allure
 
 class bannerObjects:
     banner_btn = (By.XPATH, "//*[@id='menu_products']/a")
-
+    add_btn = (By.XPATH, "//*[@id='addbutton']")
+    check_loadbanner = (By.XPATH, "//h2[text()='Banners']")
+    title_textbox = (By.XPATH, "//*[@id='banner_title']")
+    link_textbox = (By.XPATH, "//*[@id='banner_link']")
+    banner_upload = (By.XPATH, "//*[@id='banner_image']")
+    save_newbtn = (By.XPATH, "//*[@id='newsave']")
+    check_newbanner = (By.XPATH, "//td[text()='DemoAdd']")
+    delete_newbtn = (By.XPATH, "//tbody/tr[2]/td/a[2]")
 
     def __init__(self,browser):
         self.browser = browser
