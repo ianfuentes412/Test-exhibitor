@@ -10,7 +10,7 @@ import allure
 
 class productObjects:
     product_btn = (By.XPATH, "//*[@id='menu_preview']/a")
-    product_load = (By.XPATH, "//*[@class='alert alert-info']")
+    product_load = (By.CLASS_NAME, "//*[@class='alert alert-info']")
     add_prod_btn = (By.XPATH, "//*[@id='addproduct']")
     prod_title = (By.XPATH, "//*[@id='product_title']")
     prod_link = (By.XPATH, "//*[@id='product_link']")
