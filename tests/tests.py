@@ -6,6 +6,7 @@ from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
 from pages.test_preview import previewObjects
+from pages.test_products import productObjects
 from resources.variables import *
 #heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
@@ -68,22 +69,22 @@ def test_help_page(browser):
    # announce_page.check_ann_change2()
     #announce_page.delete_ann()
 
-@allure.title('Checking Banner Tab')
-def test_banner_page(browser):
-    banner_page = bannerObjects(browser)
-    banner_page.enter_banner()
-    banner_page.check_ban_load()
-    banner_page.check_button_signin()
-    banner_page.add_banner()
-    banner_page.check_title_text()
-    banner_page.check_link_text()
-    banner_page.edit_title_text(title)
-    banner_page.edit_link_text(link)
-    banner_page.add_new_image(banner)
-    banner_page.save_banner_btn()
-    banner_page.check_newbanner()
-    banner_page.delete_banner_btn()
-    banner_page.check_deleted_banner()
+#@allure.title('Checking Banner Tab')
+#def test_banner_page(browser):
+#    banner_page = bannerObjects(browser)
+ #   banner_page.enter_banner()
+  #  banner_page.check_ban_load()
+  #  banner_page.check_button_signin()
+  #  banner_page.add_banner()
+   # banner_page.check_title_text()
+   # banner_page.check_link_text()
+    #banner_page.edit_title_text(title)
+    #banner_page.edit_link_text(link)
+    #banner_page.add_new_image(banner)
+    #banner_page.save_banner_btn()
+    #banner_page.check_newbanner()
+    #banner_page.delete_banner_btn()
+    #banner_page.check_deleted_banner()
 
 #@allure.title('Checking Preview Tab')
 #def test_preview_page(browser):
@@ -92,6 +93,16 @@ def test_banner_page(browser):
     #preview_page.check_preview_loaded()
     #preview_page.check_book_element1()
 
+@allure.title('Checking Products Tab')
+def test_product_page(browser):
+    product_page = productObjects(browser)
+    product_page.enter_product()
+    product_page.check_product_loaded()
+    product_page.check_add_btn()
+    product_page.add_product_title(demo_prod_title)
+    product_page.add_product_link(demo_prod_link)
+    product_page.save_new_product()
+    product_page.check_new_product()
 
 
 
@@ -105,6 +116,8 @@ def test_banner_page(browser):
 #     login_page.click_signin()
 #     assert "Sandeep Kumar" in home_page.check_valid_login_header(), "Valid login probably failed or wrong username found after login"
 #     assert "Sandeep Kumar" in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
+
+
 
 
 

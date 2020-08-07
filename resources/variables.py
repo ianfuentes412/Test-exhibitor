@@ -25,3 +25,7 @@ demo2_announce = "This is an edited dummy announcement to show the edit button i
 title = "DemoAdd"
 link = "https://google.ca"
 banner = "${banner.jpg}"
+
+#Products
+demo_prod_title = "Hitchhiker's Guide to the Galaxy"
+demo_prod_link = "https://google.ca"
