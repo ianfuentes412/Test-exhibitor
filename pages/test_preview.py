@@ -13,9 +13,7 @@ class previewObjects:
     preview_test = (By.XPATH, "//*[@id='company']")
     previewchat = (By.XPATH, "//*[@id='chat']")
     previewappoint=(By.XPATH, "//*[@id='appointment']")
-    entrytest1=(By.XPATH,"//a[@text()='Business and Professional Communication']")
-    entrytest2=(By.XPATH,"//a[@text()='Business Communication NOW']")
-    entrytest2=(By.XPATH,"//a[@text()='ISE Business Communication: Developing Leaders for a Networked World']")
+    entrytest1=(By.XPATH, "//*[@id='highlights']")
 
     def __init__(self,browser):
         self.browser = browser
