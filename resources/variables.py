@@ -24,4 +24,4 @@ demo2_announce = "This is an edited dummy announcement to show the edit button i
 #Banner
 title = "DemoAdd"
 link = "https://google.ca"
-banner = "\Documents\PycharmProjects\temp-exhibitor\resources\banner.jpg"
+banner = "\\resources\\banner.jpg"
