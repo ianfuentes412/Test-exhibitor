@@ -87,23 +87,23 @@ def test_help_page(browser):
     #banner_page.delete_banner_btn()
     #banner_page.check_deleted_banner()
 
-@allure.title('Checking Preview Tab')
-def test_preview_page(browser):
-    preview_page = previewObjects(browser)
-    preview_page.enter_preview()
-    preview_page.check_preview_loaded()
-    preview_page.check_book_element1()
+#@allure.title('Checking Preview Tab')
+#def test_preview_page(browser):
+    #preview_page = previewObjects(browser)
+    #preview_page.enter_preview()
+    #preview_page.check_preview_loaded()
+    #preview_page.check_book_element1()
 
-@allure.title('Checking Products Tab')
-def test_product_page(browser):
-    product_page = productObjects(browser)
-    product_page.enter_product()
-    product_page.check_product_loaded()
-    product_page.check_add_btn()
-    product_page.add_product_title(demo_prod_title)
-    product_page.add_product_link(demo_prod_link)
-    product_page.save_new_product()
-    product_page.check_new_product()
+#@allure.title('Checking Products Tab')
+#def test_product_page(browser):
+    #product_page = productObjects(browser)
+    #product_page.enter_product()
+    #product_page.check_product_loaded()
+    #product_page.check_add_btn()
+    #product_page.add_product_title(demo_prod_title)
+    #product_page.add_product_link(demo_prod_link)
+    #product_page.save_new_product()
+    #product_page.check_new_product()
 
 @allure.title('Checking Prizes Tab')
 def test_prizes_page(browser):

@@ -14,10 +14,10 @@ class prizesObjects:
     add_prize_btn = (By.XPATH, "//*[@id='addprize']")
     pri_title = (By.XPATH, "//*[@id='prize_title']")
     pri_link = (By.XPATH, "//*[@id='prize_link']")
-    pri_message= (By.XPATH, "//*[@id='prize_message']")
-    prize_type= (By.XPATH,"//*[@id='formnew']/div[6]/div[2]/label")
+    pri_message = (By.XPATH, "//*[@id='prize_message']")
+    prize_type = (By.XPATH, "//*[@id='formnew']/div[6]/div[2]/label")
     pri_save = (By.XPATH, "//*[@id='save']")
-    check_newprize = (By.XPATH, "//*[@class='alert alert-success']")
+    check_newprize = (By.XPATH, "//*[@id='createdmessage']")
 
     def __init__(self, browser):
         self.browser = browser
@@ -67,11 +67,8 @@ class prizesObjects:
 
     @allure.step('Click to save Prize')
     def save_new_prizes(self):
-        try:
-            self.browser.find_element(*self.pri_save).click()
-            assert True
-        except:
-            assert False
+        self.browser.find_element(*self.pri_save).click()
+        time.sleep(2)
 
     @allure.step('Check if prize is saved')
     def check_new_prizes(self):
