@@ -7,7 +7,7 @@ from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
 from pages.test_preview import previewObjects
 from pages.test_products import productObjects
-from pages.prizes import prizesObjects
+from pages.test_prizes import prizesObjects
 from resources.variables import *
 #heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
@@ -111,8 +111,12 @@ def test_prizes_page(browser):
     prizes_page.enter_prizes()
     prizes_page.check_prize_loaded()
     prizes_page.prize_click_add_btn()
-    prizes_page.add_prizes_title(demo_prod_title)
-    prizes_page.add_prizes_link(demo_prod_link)
+    prizes_page.add_prizes_title(demo_pri_title)
+    prizes_page.add_prizes_link(demo_pri_link)
+    prizes_page.add_prizes_message(demo_pri_message)
+    prizes_page.add_prizes_type()
+    prizes_page.save_new_prizes()
+    prizes_page.check_new_prizes()
 
 
 

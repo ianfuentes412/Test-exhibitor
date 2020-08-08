@@ -53,7 +53,7 @@ class prizesObjects:
         self.browser.find_element(*self.pri_link).send_keys(pri_change2)
 
     @allure.step('Enter Message in Textbox')
-    def add_prizes_link(self, pri_change3):
+    def add_prizes_message(self, pri_change3):
         self.browser.find_element(*self.pri_message).clear()
         self.browser.find_element(*self.pri_message).send_keys(pri_change3)
 

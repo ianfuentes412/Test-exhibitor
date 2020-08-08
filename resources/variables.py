@@ -29,3 +29,8 @@ banner = "${banner.jpg}"
 #Products
 demo_prod_title = "Hitchhiker's Guide to the Galaxy"
 demo_prod_link = "https://google.ca"
+
+#Prizes
+demo_pri_title = "Mitsubishi Lancer"
+demo_pri_link = "https://google.ca"
+demo_pri_message = "Thank you for Participating!"
