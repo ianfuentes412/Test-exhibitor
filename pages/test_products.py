@@ -20,7 +20,7 @@ class productObjects:
     def __init__(self, browser):
         self.browser = browser
 
-    @allure.step('Enter Help Through Home Page')
+    @allure.step('Enter Product Through Home Page')
     def enter_product(self):
         self.browser.find_element(*self.product_btn).click()
 
