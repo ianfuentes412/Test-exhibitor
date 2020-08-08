@@ -7,6 +7,7 @@ from pages.test_announce import announceObjects
 from pages.test_banner import bannerObjects
 from pages.test_preview import previewObjects
 from pages.test_products import productObjects
+from pages.prizes import prizesObjects
 from resources.variables import *
 #heeeasfsfasfasfasf
 @allure.title('To check if login page loads and all elements present')
@@ -86,12 +87,12 @@ def test_help_page(browser):
     #banner_page.delete_banner_btn()
     #banner_page.check_deleted_banner()
 
-#@allure.title('Checking Preview Tab')
-#def test_preview_page(browser):
-   # preview_page = previewObjects(browser)
-   # preview_page.enter_preview()
-    #preview_page.check_preview_loaded()
-    #preview_page.check_book_element1()
+@allure.title('Checking Preview Tab')
+def test_preview_page(browser):
+    preview_page = previewObjects(browser)
+    preview_page.enter_preview()
+    preview_page.check_preview_loaded()
+    preview_page.check_book_element1()
 
 @allure.title('Checking Products Tab')
 def test_product_page(browser):
@@ -103,6 +104,16 @@ def test_product_page(browser):
     product_page.add_product_link(demo_prod_link)
     product_page.save_new_product()
     product_page.check_new_product()
+
+@allure.title('Checking Prizes Tab')
+def test_prizes_page(browser):
+    prizes_page = prizesObjects(browser)
+    prizes_page.enter_prizes()
+    prizes_page.check_prize_loaded()
+    prizes_page.prize_click_add_btn()
+    prizes_page.add_prizes_title(demo_prod_title)
+    prizes_page.add_prizes_link(demo_prod_link)
+
 
 
 
