@@ -73,7 +73,7 @@ class prizesObjects:
     @allure.step('Check if prize is saved')
     def check_new_prizes(self):
         try:
-            self.browser.find_element(*self.check_newprize)
+            self.browser.find_element(*self.prizes_load)
             assert True
         except:
             assert False
