@@ -17,7 +17,7 @@ class prizesObjects:
     pri_message = (By.XPATH, "//*[@id='prize_message']")
     prize_type = (By.XPATH, "//*[@id='formnew']/div[6]/div[2]/label")
     pri_save = (By.XPATH, "//*[@id='save']")
-    check_newprize = (By.XPATH, "//*[@id='createdmessage']")
+    check_newprize = (By.XPATH, "//*[text()='The prize was created.']")
 
     def __init__(self, browser):
         self.browser = browser
