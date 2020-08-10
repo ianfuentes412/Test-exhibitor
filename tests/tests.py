@@ -4,6 +4,7 @@ from pages.loginpage import loginpageObjects
 from pages.homepage import homepageObjects
 from pages.test_help import helpObjects
 from pages.test_announce import announceObjects
+from pages.test_compinfo import compObjects
 from pages.test_banner import bannerObjects
 from pages.test_preview import previewObjects
 from pages.test_products import productObjects
@@ -43,32 +44,32 @@ def test_login_valid(browser):
    # home_page.check_valid_video()
    # assert True
 
-@allure.title('Checking if Help Screen Elements are Present')
-def test_help_page(browser):
-    help_page = helpObjects(browser)
-    help_page.enter_help()
-    help_page.click_dropdown1()
-    help_page.check_dropdown1()
-    help_page.click_dropdown2()
-    help_page.check_dropdown2()
-    help_page.click_dropdown3()
-    help_page.check_dropdown3()
-    help_page.click_dropdown4()
-    help_page.check_dropdown4()
+#@allure.title('Checking if Help Screen Elements are Present')
+#def test_help_page(browser):
+    #help_page = helpObjects(browser)
+    #help_page.enter_help()
+    #help_page.click_dropdown1()
+    #help_page.check_dropdown1()
+    #help_page.click_dropdown2()
+    #help_page.check_dropdown2()
+    #help_page.click_dropdown3()
+    #help_page.check_dropdown3()
+    #help_page.click_dropdown4()
+    #help_page.check_dropdown4()
 
-@allure.title('Checking Announcements Tab')
-def test_announcement_page(browser):
-    announce_page = announceObjects(browser)
-    announce_page.enter_announce()
-    announce_page.check_announce_load()
+#@allure.title('Checking Announcements Tab')
+#def test_announcement_page(browser):
+    #announce_page = announceObjects(browser)
+    #announce_page.enter_announce()
+    #announce_page.check_announce_load()
 
-    announce_page.add_new_announce()
+    #announce_page.add_new_announce()
 
-    announce_page.click_ann_edit()
-    announce_page.edit_announcement(demo2_announce)
-    announce_page.saveupdated_announcement()
-    announce_page.check_ann_change2()
-    announce_page.delete_ann()
+    #announce_page.click_ann_edit()
+    #announce_page.edit_announcement(demo2_announce)
+    #announce_page.saveupdated_announcement()
+    #announce_page.check_ann_change2()
+    #announce_page.delete_ann()
 
 #@allure.title('Checking Banner Tab')
 #def test_banner_page(browser):
@@ -105,21 +106,23 @@ def test_announcement_page(browser):
     #product_page.save_new_product()
     #product_page.check_new_product()
 
-@allure.title('Checking Prizes Tab')
-def test_prizes_page(browser):
-    prizes_page = prizesObjects(browser)
-    prizes_page.enter_prizes()
-    prizes_page.check_prize_loaded()
-    prizes_page.prize_click_add_btn()
-    prizes_page.add_prizes_title(demo_pri_title)
-    prizes_page.add_prizes_link(demo_pri_link)
-    prizes_page.add_prizes_message(demo_pri_message)
-    prizes_page.add_prizes_type()
-    prizes_page.save_new_prizes()
-    #prizes_page.check_new_prizes()
+#@allure.title('Checking Prizes Tab')
+#def test_prizes_page(browser):
+    #prizes_page = prizesObjects(browser)
+    #prizes_page.enter_prizes()
+    #prizes_page.check_prize_loaded()
+    #prizes_page.prize_click_add_btn()
+    #prizes_page.add_prizes_title(demo_pri_title)
+    #prizes_page.add_prizes_link(demo_pri_link)
+    #prizes_page.add_prizes_message(demo_pri_message)
+    #prizes_page.add_prizes_type()
+    #prizes_page.save_new_prizes()
 
-
-
+@allure.title('Checking Company Info Tab')
+def test_company_page(browser):
+    comp_page = compObjects(browser)
+    comp_page.enter_comp()
+    comp_page.check_comp_loaded()
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
