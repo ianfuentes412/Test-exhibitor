@@ -123,7 +123,7 @@ class compObjects:
             assert False
 
     @allure.step('Fill in Country')
-    def enter_postal(self, CCountry):
+    def enter_country(self, CCountry):
         try:
             self.browser.find_element(*self.comp_postal).clear()
             self.browser.find_element(*self.comp_postal).send_keys(CCountry)
