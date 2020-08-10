@@ -37,3 +37,5 @@ demo_pri_message = "Thank you for Participating!"
 
 #Company Info
 demo_comp_title = "easyRegister"
+demo_comp_fname = "Marts"
+demo_comp_lname = "Voels"

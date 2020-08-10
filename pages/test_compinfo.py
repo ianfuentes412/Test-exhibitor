@@ -43,8 +43,8 @@ class compObjects:
         except:
             assert False
 
-    @allure.step('Fill in Comp Name')
-    def enter_comp_name(self, CTitle):
+    @allure.step('Fill in Comp Title')
+    def enter_comp_title(self, CTitle):
         self.browser.find_element(*self.comp_title).clear()
         self.browser.find_element(*self.comp_title).send_keys(CTitle)
 

@@ -123,6 +123,10 @@ def test_company_page(browser):
     comp_page = compObjects(browser)
     comp_page.enter_comp()
     comp_page.check_comp_loaded()
+    comp_page.enter_comp_title(demo_comp_title)
+    comp_page.enter_first_name(demo_comp_fname)
+    comp_page.enter_last_name(demo_comp_lname)
+
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
