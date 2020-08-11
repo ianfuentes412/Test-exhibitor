@@ -136,7 +136,10 @@ def test_company_page(browser):
     comp_page.enter_postal(demo_comp_postal)
     comp_page.enter_province(demo_comp_province)
     comp_page.enter_country(demo_comp_country)
-
+    comp_page.click_webtab()
+    comp_page.enter_website(demo_comp_website)
+    comp_page.click_desctab()
+    comp_page.enter_description(demo_comp_description)
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):

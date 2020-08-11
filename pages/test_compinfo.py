@@ -28,6 +28,9 @@ class compObjects:
     comp_webtab = (By.XPATH, "//*[@id='websitetab']")
     comp_website = (By.XPATH, "//*[@id='exhibitor_website']")
 
+    comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
+    comp_decript = (By.XPATH, "//*[@id='tinymce']")
+
     def __init__(self, browser):
         self.browser = browser
 
@@ -111,6 +114,7 @@ class compObjects:
         try:
             self.browser.find_element(*self.comp_province).clear()
             self.browser.find_element(*self.comp_province).send_keys(CProv)
+            assert True
         except:
             assert False
 
@@ -119,23 +123,50 @@ class compObjects:
         try:
             self.browser.find_element(*self.comp_postal).clear()
             self.browser.find_element(*self.comp_postal).send_keys(CPostal)
+            assert True
         except:
             assert False
 
     @allure.step('Fill in Country')
     def enter_country(self, CCountry):
         try:
-            self.browser.find_element(*self.comp_postal).clear()
-            self.browser.find_element(*self.comp_postal).send_keys(CCountry)
+            self.browser.find_element(*self.comp_country).clear()
+            self.browser.find_element(*self.comp_country).send_keys(CCountry)
+            assert True
         except:
             assert False
 
     @allure.step('Switch Tab to Website')
-    def click_addtab(self):
+    def click_webtab(self):
         try:
             self.browser.find_element(*self.comp_addtab).click()
             assert True
         except:
             assert False
 
+    @allure.step('Fill in Website')
+    def enter_website(self, CWebsite):
+        try:
+            self.browser.find_element(*self.comp_website).clear()
+            self.browser.find_element(*self.comp_website).send_keys(CWebsite)
+            assert True
+        except:
+            assert False
+
+    @allure.step('Switch Tab to Description')
+    def click_desctab(self):
+        try:
+            self.browser.find_element(*self.comp_desctab).click()
+            assert True
+        except:
+            assert False
+
+    @allure.step('Fill in Description')
+    def enter_description(self, CDescription):
+        try:
+            self.browser.find_element(*self.comp_decript).clear()
+            self.browser.find_element(*self.comp_decript).send_keys(CDescription)
+            assert True
+        except:
+            assert False
 
