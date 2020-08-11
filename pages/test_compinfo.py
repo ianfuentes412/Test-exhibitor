@@ -139,7 +139,7 @@ class compObjects:
     @allure.step('Switch Tab to Website')
     def click_webtab(self):
         try:
-            self.browser.find_element(*self.comp_addtab).click()
+            self.browser.find_element(*self.comp_webtab).click()
             assert True
         except:
             assert False
