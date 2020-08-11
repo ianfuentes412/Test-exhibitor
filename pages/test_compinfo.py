@@ -30,7 +30,7 @@ class compObjects:
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
     comp_close = (By.XPATH, "//*[@id='exhibitor_text_ifr']")
-    comp_decript = (By.XPATH, "//*[@id='tinymce']")
+    comp_decript = (By.XPATH, "//body[@id='tinymce']")
 
     def __init__(self, browser):
         self.browser = browser
