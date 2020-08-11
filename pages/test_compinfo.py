@@ -166,8 +166,8 @@ class compObjects:
     def enter_description(self, CDescription):
         try:
             #self.browser.find_element(*self.comp_close).click()
-            iframe = self.browser.find_element_by_id('exhibitor_text_ifr')
-            self.browser.switch_to.frame(iframe)
+            #iframe = self.browser.find_element_by_id('exhibitor_text_ifr')
+            #self.browser.switch_to.frame(iframe)
             self.browser.find_element(*self.comp_decript).clear()
             self.browser.find_element(*self.comp_decript).send_keys(CDescription)
             assert True
