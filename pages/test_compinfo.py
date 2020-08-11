@@ -29,7 +29,7 @@ class compObjects:
     comp_website = (By.XPATH, "//*[@id='exhibitor_website']")
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
-    comp_close = (By.XPATH, "/html/body/div[3]/div/div/button/div")
+    comp_close = (By.XPATH, "/html/body/div[3]/div/div/button/div/svg")
     comp_decript = (By.XPATH, "//textarea[@id='exhibitor_text']")
 
     def __init__(self, browser):
