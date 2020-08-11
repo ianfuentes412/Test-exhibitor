@@ -10,7 +10,7 @@ from pages.test_preview import previewObjects
 from pages.test_products import productObjects
 from pages.test_prizes import prizesObjects
 from resources.variables import *
-#heeeasfsfasfasfasf
+
 @allure.title('To check if login page loads and all elements present')
 def test_loginpage_elements(browser):
     login_page = loginpageObjects(browser)
