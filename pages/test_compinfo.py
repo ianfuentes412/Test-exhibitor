@@ -29,7 +29,7 @@ class compObjects:
     comp_website = (By.XPATH, "//*[@id='exhibitor_website']")
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
-    comp_decript = (By.XPATH, "//*[@id='exhibitor_text_ifr']")
+    comp_decript = (By.XPATH, "//*[@id='exhibitor_text']")
 
     def __init__(self, browser):
         self.browser = browser
