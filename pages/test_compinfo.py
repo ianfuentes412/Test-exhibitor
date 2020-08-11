@@ -166,7 +166,7 @@ class compObjects:
     def enter_description(self, CDescription):
         try:
             #self.browser.find_element(*self.comp_close).click()
-            self.browser.find_element(*self.comp_decript).clear()
+            #self.browser.find_element(*self.comp_decript).clear()
             self.browser.find_element(*self.comp_decript).send_keys(CDescription)
             assert True
         except:
