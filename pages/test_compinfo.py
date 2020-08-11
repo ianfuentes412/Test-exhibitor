@@ -29,7 +29,7 @@ class compObjects:
     comp_website = (By.XPATH, "//*[@id='exhibitor_website']")
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
-    comp_close = (By.XPATH, "/html/body/div[3]/div/div/button/div/svg")
+    comp_close = (By.XPATH, "//*[@id='exhibitor_text_ifr']")
     comp_decript = (By.XPATH, "//textarea[@id='exhibitor_text']")
 
     def __init__(self, browser):
@@ -165,7 +165,7 @@ class compObjects:
     @allure.step('Fill in Description')
     def enter_description(self, CDescription):
         try:
-            self.browser.find_element(*self.comp_close).click()
+            #self.browser.find_element(*self.comp_close).click()
             self.browser.find_element(*self.comp_decript).clear()
             self.browser.find_element(*self.comp_decript).send_keys(CDescription)
             assert True
