@@ -33,6 +33,7 @@ class compObjects:
     comp_decript = (By.XPATH, "//*[@id='tinymce']")
 
     def __init__(self, browser):
+        self.driver = None
         self.browser = browser
 
     @allure.step('Enter Comp Info Through Home Page')
@@ -166,10 +167,10 @@ class compObjects:
     def enter_description(self, CDescription):
         try:
             #self.browser.find_element(*self.comp_close).click()
-            self.browser.switchTo().frame("exhibitor_text_ifr")
+            self.driver.switchTo().frame("exhibitor_text_ifr")
             self.browser.find_element(*self.comp_decript).clear()
             self.browser.find_element(*self.comp_decript).send_keys(CDescription)
-            self.browser.switchTo().parentFrame()
+            self.driver.switchTo().parentFrame()
             assert True
         except:
             assert False
