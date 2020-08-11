@@ -30,7 +30,7 @@ class compObjects:
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
     comp_close = (By.XPATH, "//*[@id='exhibitor_text_ifr']")
-    comp_decript = (By.XPATH, "/html")
+    comp_decript = (By.XPATH, "//*[@id='tinymce']")
 
     def __init__(self, browser):
         self.browser = browser
@@ -166,8 +166,10 @@ class compObjects:
     def enter_description(self, CDescription):
         try:
             #self.browser.find_element(*self.comp_close).click()
+            self.browser.switchTo().frame("exhibitor_text_ifr")
             self.browser.find_element(*self.comp_decript).clear()
             self.browser.find_element(*self.comp_decript).send_keys(CDescription)
+            self.browser.switchTo().parentFrame()
             assert True
         except:
             assert False
