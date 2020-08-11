@@ -30,7 +30,7 @@ class compObjects:
 
     comp_desctab = (By.XPATH, "//*[@id='descriptiontab']")
     comp_close = (By.XPATH, "//*[@id='exhibitor_text_ifr']")
-    comp_decript = (By.XPATH, "//*[@id='description']/div/div/div/div/div[1]/div[2]/div[1]")
+    comp_decript = (By.XPATH, "//*[@id='description']")
 
     def __init__(self, browser):
         self.browser = browser
