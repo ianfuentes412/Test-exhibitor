@@ -35,6 +35,8 @@ class compObjects:
     comp_logotab = (By.XPATH, "//*[@id='logotab']")
     comp_photo = (By.XPATH, "//*[@id='exhibitor_file_logo']")
 
+    comp_saveadd = (By.XPATH,"//*[@id='save']")
+
     def __init__(self, browser):
         self.browser = browser
 
@@ -186,7 +188,7 @@ class compObjects:
         except:
             assert False
 
-    @allure.step('Add Picture')
+    @allure.step('Adds a new Logo to the company')
     def upload_photo(self):
         path = os.getcwd()
         if os.name == "posix":
@@ -194,3 +196,11 @@ class compObjects:
         else:
             photo_path = path + "\\banner.jpg"
         self.browser.find_element(*self.comp_photo).send_keys(photo_path)
+
+    @allure.step('Click to save Company Information Changes')
+    def click_savecompinfo(self):
+        try:
+            self.browser.find_element(*self.comp_saveadd).click()
+            assert True
+        except:
+            assert False

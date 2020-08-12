@@ -95,16 +95,18 @@ def test_login_valid(browser):
     #preview_page.check_preview_loaded()
     #preview_page.check_book_element1()
 
-#@allure.title('Checking Products Tab')
-#def test_product_page(browser):
-    #product_page = productObjects(browser)
-    #product_page.enter_product()
-    #product_page.check_product_loaded()
-    #product_page.check_add_btn()
-    #product_page.add_product_title(demo_prod_title)
-    #product_page.add_product_link(demo_prod_link)
-    #product_page.save_new_product()
-    #product_page.check_new_product()
+@allure.title('Checking Products Tab')
+def test_product_page(browser):
+    product_page = productObjects(browser)
+    product_page.enter_product()
+    product_page.check_product_loaded()
+    product_page.check_add_btn()
+    product_page.add_product_title(demo_prod_title)
+    product_page.add_product_link(demo_prod_link)
+    product_page.add_product_image()
+    product_page.enter_prod_description(demo_comp_description)
+    product_page.save_new_product()
+    product_page.check_new_product()
 
 #@allure.title('Checking Prizes Tab')
 #def test_prizes_page(browser):
@@ -138,11 +140,11 @@ def test_company_page(browser):
     #comp_page.enter_country(demo_comp_country)
     #comp_page.click_webtab()
     #comp_page.enter_website(demo_comp_website)
-    comp_page.click_desctab()
-    comp_page.enter_description(demo_comp_description)
+    #comp_page.click_desctab()
+    #comp_page.enter_description(demo_comp_description)
 
-    comp_page.click_logotab()
-    comp_page.upload_photo()
+    #comp_page.click_logotab()
+    #comp_page.upload_photo()
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
