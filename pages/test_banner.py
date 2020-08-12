@@ -10,7 +10,7 @@ import allure
 class bannerObjects:
     banner_btn = (By.XPATH, "//*[@id='menu_products']/a")
     add_btn = (By.XPATH, "//*[@id='addbutton']")
-    check_loadbanner = (By.XPATH, "//h2[text()='Banners']")
+    check_loadbanner = (By.XPATH, "//*[@id='bannertop']")
     title_textbox = (By.XPATH, "//*[@id='banner_title']")
     link_textbox = (By.XPATH, "//*[@id='banner_link']")
     banner_upload = (By.XPATH, "//*[@id='banner_image']")
