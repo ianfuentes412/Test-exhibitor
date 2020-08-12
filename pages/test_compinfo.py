@@ -33,6 +33,7 @@ class compObjects:
     comp_decript = (By.XPATH, "//*[@id='tinymce']")
 
     comp_logotab = (By.XPATH, "//*[@id='logotab']")
+    comp_photo = (By.XPATH, "//*[@id='exhibitor_file_logo']")
 
     def __init__(self, browser):
         self.browser = browser
@@ -192,4 +193,4 @@ class compObjects:
             photo_path = path + "/banner.jpg"
         else:
             photo_path = path + "\\banner.jpg"
-        self.browser.find_element(*self.photo).send_keys(photo_path)
+        self.browser.find_element(*self.comp_photo).send_keys(photo_path)
