@@ -141,6 +141,9 @@ def test_company_page(browser):
     comp_page.click_desctab()
     comp_page.enter_description(demo_comp_description)
 
+    comp_page.click_logotab()
+    comp_page.upload_photo()
+
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
 #     login_page = loginpageObjects(browser)
