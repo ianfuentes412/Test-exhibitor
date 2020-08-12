@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
-import allure
+import allure, os
 
 
 class compObjects:
@@ -174,3 +174,11 @@ class compObjects:
         except:
             assert False
 
+    @allure.step('Add Picture')
+    def upload_photo(self):
+        path = os.getcwd()
+        if os.name == "posix":
+            photo_path = path + "/banner.jpg"
+        else:
+            photo_path = path + "\\banner.jpg"
+        self.browser.find_element(*self.photo).send_keys(photo_path)
