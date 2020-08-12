@@ -118,6 +118,8 @@ def test_prizes_page(browser):
     prizes_page.add_prizes_link(demo_pri_link)
     prizes_page.add_prizes_message(demo_pri_message)
     prizes_page.add_prizes_type()
+    prizes_page.add_prizes_image()
+    prizes_page.add_prizes_message(demo_comp_description)
     prizes_page.save_new_prizes()
 
 @allure.title('Checking Company Info Tab')
