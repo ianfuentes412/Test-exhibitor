@@ -1,5 +1,5 @@
 import time
-
+import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import Select
 import allure, os
 
 
-class productObjects:
+class productObjects(unittest.TestCase):
     product_btn = (By.XPATH, "//*[@id='menu_products']/a")
     product_load = (By.XPATH, "//h2[text()='Products/Services']")
     add_prod_btn = (By.XPATH, "//*[@id='addproduct']")

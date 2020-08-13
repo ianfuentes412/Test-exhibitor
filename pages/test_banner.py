@@ -1,4 +1,5 @@
 import time
+import unittest
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -7,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import allure, os
 
-class bannerObjects:
+class bannerObjects(unittest.TestCase):
     banner_btn = (By.XPATH, "//*[@id='menu_banners']/a")
     add_btn = (By.XPATH, "//*[@id='addbutton']")
     check_loadbanner = (By.XPATH, "//*[@id='bannertop']")
