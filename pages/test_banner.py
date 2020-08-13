@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import Select
 import allure
 
 class bannerObjects:
-    banner_btn = (By.XPATH, "//*[@id='menu_products']/a")
+    banner_btn = (By.XPATH, "//*[@id='menu_banners']/a")
     add_btn = (By.XPATH, "//*[@id='addbutton']")
     check_loadbanner = (By.XPATH, "//*[@id='bannertop']")
     title_textbox = (By.XPATH, "//*[@id='banner_title']")
@@ -21,7 +21,7 @@ class bannerObjects:
     def __init__(self,browser):
         self.browser = browser
 
-    @allure.step('Enter Help Through Home Page')
+    @allure.step('Enter Banner Through Home Page')
     def enter_banner(self):
         self.browser.find_element(*self.banner_btn).click()
 
