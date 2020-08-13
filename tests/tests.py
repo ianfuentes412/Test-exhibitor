@@ -82,7 +82,7 @@ def test_banner_page(browser):
     banner_page.check_link_text()
     banner_page.edit_title_text(title)
     banner_page.edit_link_text(link)
-    banner_page.upload__banner_photo(banner)
+    banner_page.upload__banner_photo()
     banner_page.save_banner_btn()
     banner_page.check_newbanner()
     banner_page.delete_banner_btn()
