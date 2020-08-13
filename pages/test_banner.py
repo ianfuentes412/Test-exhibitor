@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
-import allure
+import allure, os
 
 class bannerObjects:
     banner_btn = (By.XPATH, "//*[@id='menu_banners']/a")
@@ -13,7 +13,7 @@ class bannerObjects:
     check_loadbanner = (By.XPATH, "//*[@id='bannertop']")
     title_textbox = (By.XPATH, "//*[@id='banner_title']")
     link_textbox = (By.XPATH, "//*[@id='banner_link']")
-    banner_upload = (By.XPATH, "//*[@id='banner_image']")
+    bann_photo = (By.XPATH, "//*[@id='banner_image']")
     save_newbtn = (By.XPATH, "//*[@id='newsave']")
     check_newbanner = (By.XPATH, "//td[text()='DemoAdd']")
     delete_newbtn = (By.XPATH, "//tbody/tr[2]/td/a[2]")
@@ -71,9 +71,14 @@ class bannerObjects:
         self.browser.find_element(*self.link_textbox).clear()
         self.browser.find_element(*self.link_textbox).send_keys(links)
 
-    @allure.step('Enter Image')
-    def add_new_image(self, banner):
-        self.browser.find_element(*self.banner_upload).send_keys(banner)
+    @allure.step('Enter Banner images')
+    def upload__banner_photo(self):
+        path = os.getcwd()
+        if os.name == "posix":
+            photo_path = path + "/banner.jpg"
+        else:
+            photo_path = path + "\\banner.jpg"
+        self.browser.find_element(*self.bann_photo).send_keys(photo_path)
 
     @allure.step('Click Save Button')
     def save_banner_btn(self):
