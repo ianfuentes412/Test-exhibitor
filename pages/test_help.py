@@ -1,5 +1,5 @@
 import time
-import unittest
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import allure
 
-class helpObjects(unittest.TestCase):
+class helpObjects:
 
     dropdown1 = (By.XPATH, "//*[@id='accordion']/div[1]/a")
     dropdown2 = (By.XPATH, "//*[@id='accordion']/div[2]/a")

@@ -1,5 +1,5 @@
 import time
-import unittest
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import allure
 
-class homepageObjects(unittest.TestCase):
+class homepageObjects:
 
     valid_login_header = (By.XPATH, "//h2[contains(text(),'Welcome')]")
     valid_login_usermenu = (By.XPATH, "//a[@class='dropdown-toggle']")

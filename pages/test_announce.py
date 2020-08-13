@@ -1,5 +1,5 @@
 import time
-import unittest
+
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from resources.variables import *
@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import allure
 
-class announceObjects(unittest.TestCase):
+class announceObjects:
     ann_btn = (By.XPATH, "//*[@id='menu_announcements']/a")
     ann_add_ann = (By.XPATH, "//*[@id='addbutton']")
     ann_editbtn = (By.XPATH, "//*[@class='btn btn-primary mr-2']")

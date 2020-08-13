@@ -1,5 +1,5 @@
 import time
-import unittest
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import Select
 import allure, os
 
 
-class compObjects(unittest.TestCase):
+class compObjects:
     comp_btn = (By.XPATH, "//*[@id='menu_company']/a")
     comp_loaded = (By.XPATH, "//*[@id='updateform']")
     comp_title = (By.XPATH, "//input[@id='exhibitor_company']")
