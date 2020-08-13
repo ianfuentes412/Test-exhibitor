@@ -29,7 +29,7 @@ class bannerObjects:
     def check_ban_load(self):
         try:
             self.browser.find_element(*self.check_loadbanner)
-            allure.attach(self.get_screenshot_as_png(),name='screenshot',attachment_type=allure.attachment_type.PNG)
+            allure.attach('screenshot', self.browser.get_screenshot_as_png())
             assert True
         except:
             assert False
