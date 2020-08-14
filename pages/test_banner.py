@@ -27,22 +27,21 @@ class bannerObjects:
 
     @allure.step('Check If Banner Loaded')
     def check_ban_load(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Banner_Loaded',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_loadbanner)
-            allure.attach(self.browser.get_screenshot_as_png(), name= 'Banner_Loaded_Screenshot', attachment_type=allure.attachment_type.PNG)
-            assert True
+            return True
         except:
-            allure.attach(self.browser.get_screenshot_as_png(), name='Banner_Loaded_Screenshot',
-                          attachment_type=allure.attachment_type.PNG)
-            assert False
+            return False
 
     @allure.step('Checking if Add Banner button exists')
     def check_button_signin(self):
         try:
             self.browser.find_element(*self.add_btn)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Click Add Banner')
     def add_banner(self):
@@ -50,19 +49,21 @@ class bannerObjects:
 
     @allure.step('Check if Title Text Box Exists')
     def check_title_text(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Banner_Textbox',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.title_textbox)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Check if Link Text Box Exists')
     def check_link_text(self):
         try:
             self.browser.find_element(*self.link_textbox)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Enter New Title in Textbox')
     def edit_title_text(self, title):
@@ -89,11 +90,13 @@ class bannerObjects:
 
     @allure.step('Check If New Banner is Saved')
     def check_new_banner(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='New_Banner',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_newbanner)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Click Delete Button')
     def delete_banner_btn(self):
@@ -101,8 +104,10 @@ class bannerObjects:
 
     @allure.step('Check If New Banner is Deleted')
     def check_deleted_banner(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Banner_Deleted',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_newbanner)
-            assert False
+            return False
         except:
-            assert True
+            return True

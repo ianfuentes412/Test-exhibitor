@@ -69,22 +69,23 @@ def test_announcement_page(browser):
     announce_page.delete_ann()
     assert announce_page.check_ann_delete() == True, "Announcement is not Deleted"
 
+
 @allure.title('Checking Banner Tab')
 def test_banner_page(browser):
- banner_page = bannerObjects(browser)
- banner_page.enter_banner()
- banner_page.check_ban_load()
- banner_page.check_button_signin()
- banner_page.add_banner()
- banner_page.check_title_text()
- banner_page.check_link_text()
- banner_page.edit_title_text(title)
- banner_page.edit_link_text(link)
- banner_page.upload__banner_photo()
- banner_page.save_banner_btn()
- banner_page.check_new_banner()
- banner_page.delete_banner_btn()
- banner_page.check_deleted_banner()
+    banner_page = bannerObjects(browser)
+    banner_page.enter_banner()
+    assert banner_page.check_ban_load() == True, "Banner Page is not Loaded"
+    assert banner_page.check_button_signin() == True, "Add Announcement Button was not Loaded"
+    banner_page.add_banner()
+    assert banner_page.check_title_text() == True, "Banner Title was not loaded"
+    assert banner_page.check_link_text() == True, "Banner Link was not Loaded"
+    banner_page.edit_title_text(title)
+    banner_page.edit_link_text(link)
+    banner_page.upload__banner_photo()
+    banner_page.save_banner_btn()
+    assert banner_page.check_new_banner() == True, "Banner was not Added"
+    banner_page.delete_banner_btn()
+    assert banner_page.check_deleted_banner() == True, "Banner was not Deleted"
 
 # @allure.title('Checking Preview Tab')
 # def test_preview_page(browser):
