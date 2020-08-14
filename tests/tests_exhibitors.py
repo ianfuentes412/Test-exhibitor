@@ -53,9 +53,9 @@ def test_help_page(browser):
     help_page.click_dropdown2()
     assert "Lorem ipsum" in help_page.check_dropdown2(), "Text did not display in dropdown 2"
     help_page.click_dropdown3()
-    help_page.check_dropdown3()
+    assert "Lorem ipsum" in help_page.check_dropdown3(), "Text did not display in dropdown 3"
     help_page.click_dropdown4()
-    help_page.check_dropdown4()
+    assert "Lorem ipsum" in help_page.check_dropdown4(), "Text did not display in dropdown 4"
 
 #@allure.title('Checking Announcements Tab')
 #def test_announcement_page(browser):

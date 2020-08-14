@@ -14,9 +14,10 @@ class helpObjects:
     dropdown3 = (By.XPATH, "//*[@id='accordion']/div[3]/a")
     dropdown4 = (By.XPATH, "//*[@id='accordion']/div[4]/a")
     find_test1 = (By.XPATH, "//*[@id='accordion-item-1']/div/p[1]")
-    find_test2 = (By.XPATH, "//*[@id='accordion']/div[2]/a/h6")
-    find_test3 = (By.XPATH, "//*[@id='accordion']/div[3]/a/h6")
-    find_test4 = (By.XPATH, "//*[@id='accordion']/div[4]/a/h6")
+    find_test2 = (By.XPATH, "//*[@id='accordion-item-2'/div/p[1]")
+    find_test3 = (By.XPATH, "//*[@id='accordion-item-3'/div/p[1]")
+    find_test4 = (By.XPATH, "//*[@id='accordion-item-4'/div/p[1]")
+    #find_test4 = (By.XPATH, "//*[@id='accordion']/div[4]/a/h6")
     help_btn = (By.XPATH, "//*[@id='menu_help']/a")
 
     def __init__(self,browser):
@@ -38,19 +39,12 @@ class helpObjects:
 
     @allure.step('Checking Title 3')
     def check_dropdown3(self):
-        try:
-            self.browser.find_element(*self.find_test3).text
-            assert True
-        except:
-            assert False
+            return self.browser.find_element(*self.find_test3).text
 
     @allure.step('Checking Title 4')
     def check_dropdown4(self):
-        try:
-            self.browser.find_element(*self.find_test4).text
-            assert True
-        except:
-            assert False
+            return self.browser.find_element(*self.find_test4).text
+
 
     @allure.step('Checking if dropdown 1 works')
     def click_dropdown1(self):
