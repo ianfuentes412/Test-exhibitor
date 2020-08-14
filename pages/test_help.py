@@ -29,43 +29,46 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 1')
     def check_dropdown1(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_1',
+                      attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test1).text
 
 
     @allure.step('Checking Dropdown 2')
     def check_dropdown2(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_2',
+                      attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test2).text
 
 
     @allure.step('Checking Dropdown 3')
     def check_dropdown3(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_3',
+                      attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test3).text
 
     @allure.step('Checking Dropdown 4')
     def check_dropdown4(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_4',
+                      attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test4).text
 
 
     @allure.step('Clicking dropdown 1')
     def click_dropdown1(self):
         self.browser.find_element(*self.dropdown1).click()
-        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_1',
-                      attachment_type=allure.attachment_type.PNG)
+
 
     @allure.step('Clicking dropdown 2')
     def click_dropdown2(self):
         self.browser.find_element(*self.dropdown2).click()
-        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_2',
-                      attachment_type=allure.attachment_type.PNG)
+
 
     @allure.step('Clicking dropdown 3')
     def click_dropdown3(self):
         self.browser.find_element(*self.dropdown3).click()
-        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_3',
-                      attachment_type=allure.attachment_type.PNG)
+
 
     @allure.step('Clicking dropdown 4')
     def click_dropdown4(self):
         self.browser.find_element(*self.dropdown4).click()
-        allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_4',
-                      attachment_type=allure.attachment_type.PNG)
