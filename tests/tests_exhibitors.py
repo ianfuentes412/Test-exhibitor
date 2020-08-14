@@ -48,8 +48,6 @@ def test_login_valid(browser):
 def test_help_page(browser):
     help_page = helpObjects(browser)
     help_page.enter_help()
-    help_page.click_dropdown1()
-    help_page.click_dropdown1()
     assert "Lorem ipsum" in help_page.check_dropdown1(), "Text did not display in dropdown 1"
     help_page.click_dropdown2()
     assert "Lorem ipsum" in help_page.check_dropdown2(), "Text did not display in dropdown 2"
