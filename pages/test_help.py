@@ -33,11 +33,8 @@ class helpObjects:
 
     @allure.step('Checking Title 2')
     def check_dropdown2(self):
-        try:
-            self.browser.find_element(*self.find_test2).text
-            assert True
-        except:
-            assert False
+        return self.browser.find_element(*self.find_test2).text
+
 
     @allure.step('Checking Title 3')
     def check_dropdown3(self):
