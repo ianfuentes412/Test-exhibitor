@@ -76,7 +76,7 @@ class announceObjects:
 
 
     @allure.step('Check if Announcement is added')
-    def check_ann_change(self):
+    def check_ann_created(self):
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Added',
                       attachment_type=allure.attachment_type.PNG)
@@ -87,7 +87,7 @@ class announceObjects:
             assert False
 
     @allure.step('Check if Announcement is changed')
-    def check_ann_change2(self):
+    def check_ann_change(self):
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Changed',
                       attachment_type=allure.attachment_type.PNG)
@@ -106,12 +106,12 @@ class announceObjects:
                 self.edit_announcement(demo_announce)
                 self.announce_type()
                 self.savenew_announcement()
-                self.check_ann_change()
+                self.check_ann_created()
         except NoSuchElementException:
                 print("Announcement already done")
 
     @allure.step('Check if Announcement is deleted')
-    def check_ann_change2(self):
+    def check_ann_delete(self):
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Deleted',
                           attachment_type=allure.attachment_type.PNG)
