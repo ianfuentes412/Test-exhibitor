@@ -31,6 +31,7 @@ class announceObjects:
 
     @allure.step('Checking If Announcement Loaded')
     def check_announce_load(self):
+        time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Tab Loaded',
                       attachment_type=allure.attachment_type.PNG)
         try:
@@ -76,6 +77,9 @@ class announceObjects:
 
     @allure.step('Check if Announcement is added')
     def check_ann_change(self):
+        time.sleep(1)
+        allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Added',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_change)
             assert True
@@ -84,6 +88,9 @@ class announceObjects:
 
     @allure.step('Check if Announcement is changed')
     def check_ann_change2(self):
+        time.sleep(1)
+        allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Changed',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_change2)
             assert True
@@ -102,3 +109,14 @@ class announceObjects:
                 self.check_ann_change()
         except NoSuchElementException:
                 print("Announcement already done")
+
+    @allure.step('Check if Announcement is deleted')
+    def check_ann_change2(self):
+        time.sleep(1)
+        allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Deleted',
+                          attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.check_change2)
+            assert False
+        except:
+            assert True
