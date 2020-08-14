@@ -29,9 +29,11 @@ class bannerObjects:
     def check_ban_load(self):
         try:
             self.browser.find_element(*self.check_loadbanner)
-            allure.attach(self.browser.get_screenshot_as_png(), name= 'screenshot', attachment_type=allure.attachment_type.PNG)
+            allure.attach(self.browser.get_screenshot_as_png(), name= 'Banner_Loaded_Screenshot', attachment_type=allure.attachment_type.PNG)
             assert True
         except:
+            allure.attach(self.browser.get_screenshot_as_png(), name='Banner_Loaded_Screenshot',
+                          attachment_type=allure.attachment_type.PNG)
             assert False
 
     @allure.step('Checking if Add Banner button exists')
