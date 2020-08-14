@@ -34,16 +34,16 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 2')
     def check_dropdown2(self):
-        return self.browser.find_element(*self.find_test2).text()
+        return self.browser.find_element(*self.find_test2).text
 
 
     @allure.step('Checking Dropdown 3')
     def check_dropdown3(self):
-            return self.browser.find_element(*self.find_test3).text()
+            return self.browser.find_element(*self.find_test3).text
 
     @allure.step('Checking Dropdown 4')
     def check_dropdown4(self):
-            return self.browser.find_element(*self.find_test4).text()
+            return self.browser.find_element(*self.find_test4).text
 
 
     @allure.step('Clicking dropdown 1 works')
