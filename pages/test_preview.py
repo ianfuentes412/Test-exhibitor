@@ -24,32 +24,34 @@ class previewObjects:
 
     @allure.step('Checking Preview Page Loaded')
     def check_preview_loaded(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Preview_Loaded',
+                      attachment_type=allure.attachment_type.PNG)
         try:
-            self.browser.find_element(*self.preview_test).text
-            assert True
+            self.browser.find_element(*self.preview_test)
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Checking Preview Element')
     def check_book_element1(self):
         try:
             self.browser.find_element(*self.entrytest1)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Checking if Chat Button Exists')
     def check_chat_btn(self):
         try:
             self.browser.find_element(*self.previewchat)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Checking if Appointment Button Exists')
     def check_appoint_btn(self):
         try:
             self.browser.find_element(*self.previewappoint)
-            assert True
+            return True
         except:
-            assert False
+            return False

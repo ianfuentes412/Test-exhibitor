@@ -88,12 +88,14 @@ def test_banner_page(browser):
     assert banner_page.check_deleted_banner() == True, "Banner was not Deleted"
 
 
-# @allure.title('Checking Preview Tab')
-# def test_preview_page(browser):
-# preview_page = previewObjects(browser)
-# preview_page.enter_preview()
-# preview_page.check_preview_loaded()
-# preview_page.check_book_element1()
+@allure.title('Checking Preview Tab')
+def test_preview_page(browser):
+ preview_page = previewObjects(browser)
+ preview_page.enter_preview()
+ assert preview_page.check_preview_loaded() == True, "Preview Page was not Loaded"
+ assert preview_page.check_book_element1() == True, "Elements were not Loaded"
+ assert preview_page.check_chat_btn() == True, "Chat Button was not Working"
+ assert preview_page.check_appoint_btn() == True, "Appointment Button was not Working"
 
 @allure.title('Checking Products Tab')
 def test_product_page(browser):
