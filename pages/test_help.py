@@ -29,6 +29,7 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 1')
     def check_dropdown1(self):
+        time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_1',
                       attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test1).text
@@ -36,6 +37,7 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 2')
     def check_dropdown2(self):
+        time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_2',
                       attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test2).text
@@ -43,12 +45,14 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 3')
     def check_dropdown3(self):
+        time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_3',
                       attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test3).text
 
     @allure.step('Checking Dropdown 4')
     def check_dropdown4(self):
+        time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Help_Dropdown_4',
                       attachment_type=allure.attachment_type.PNG)
         return self.browser.find_element(*self.find_test4).text
