@@ -51,7 +51,7 @@ def test_help_page(browser):
     help_page.click_dropdown1()
     assert "Lorem ipsum" in help_page.check_dropdown1(), "Text did not display in dropdown 1"
     help_page.click_dropdown2()
-    assert "Lorem ipsum" in help_page.check_dropdown2, "Text did not display in dropdown 2"
+    assert "Lorem ipsum" in help_page.check_dropdown2(), "Text did not display in dropdown 2"
     help_page.click_dropdown3()
     assert "Lorem ipsum" in help_page.check_dropdown3(), "Text did not display in dropdown 3"
     help_page.click_dropdown4()

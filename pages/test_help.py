@@ -29,7 +29,7 @@ class helpObjects:
 
     @allure.step('Checking Dropdown 1')
     def check_dropdown1(self):
-        return self.browser.find_element(*self.find_test1).text()
+        return self.browser.find_element(*self.find_test1).text
 
 
     @allure.step('Checking Dropdown 2')
