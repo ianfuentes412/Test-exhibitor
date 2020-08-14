@@ -83,9 +83,9 @@ class announceObjects:
                       attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_change)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Check if Announcement is changed')
     def check_ann_change(self):
@@ -94,9 +94,9 @@ class announceObjects:
                       attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_change2)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Adds a new Announcement')
     def add_new_announce(self):
@@ -118,6 +118,6 @@ class announceObjects:
                           attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_change2)
-            assert False
+            return False
         except:
-            assert True
+            return True
