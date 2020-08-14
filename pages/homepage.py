@@ -25,14 +25,6 @@ class homepageObjects:
     def check_valid_login_usermenu(self):
         return self.browser.find_element(*self.valid_login_usermenu).text
 
-    @allure.step('Checking if video works when played')
-    def check_valid_video(self):
-        try:
-            self.browser.find_element(*self.video_play).click()
-            assert True
-        except:
-            assert False
-
 
     @allure.step('Logging out current user')
     def logout(self):

@@ -41,12 +41,6 @@ def test_login_valid(browser):
     assert valid_username in home_page.check_valid_login_usermenu(), "Valid login probably failed or wrong username found after login"
 
 
-# @allure.title('Checking if the video works when clicked')
-# def test_home_video(browser):
-# home_page = homepageObjects(browser)
-# home_page.check_valid_video()
-# assert True
-
 @allure.title('Checking if Help Screen Elements are Present')
 def test_help_page(browser):
     help_page = helpObjects(browser)
@@ -71,26 +65,26 @@ def test_announcement_page(browser):
     announce_page.click_ann_edit()
     announce_page.edit_announcement(demo2_announce)
     announce_page.saveupdated_announcement()
-    assert announce_page.check_ann_change() == True, "Annoucement is not Changed"
+    assert announce_page.check_ann_change() == True, "Announcement is not Changed"
     announce_page.delete_ann()
     assert announce_page.check_ann_delete() == True, "Announcement is not Deleted"
 
-# @allure.title('Checking Banner Tab')
-# def test_banner_page(browser):
-# banner_page = bannerObjects(browser)
-# banner_page.enter_banner()
-# banner_page.check_ban_load()
-# banner_page.check_button_signin()
-# banner_page.add_banner()
-# banner_page.check_title_text()
-# banner_page.check_link_text()
-# banner_page.edit_title_text(title)
-# banner_page.edit_link_text(link)
-# banner_page.upload__banner_photo()
-# banner_page.save_banner_btn()
-# banner_page.check_new_banner()
-# banner_page.delete_banner_btn()
-# banner_page.check_deleted_banner()
+@allure.title('Checking Banner Tab')
+def test_banner_page(browser):
+ banner_page = bannerObjects(browser)
+ banner_page.enter_banner()
+ banner_page.check_ban_load()
+ banner_page.check_button_signin()
+ banner_page.add_banner()
+ banner_page.check_title_text()
+ banner_page.check_link_text()
+ banner_page.edit_title_text(title)
+ banner_page.edit_link_text(link)
+ banner_page.upload__banner_photo()
+ banner_page.save_banner_btn()
+ banner_page.check_new_banner()
+ banner_page.delete_banner_btn()
+ banner_page.check_deleted_banner()
 
 # @allure.title('Checking Preview Tab')
 # def test_preview_page(browser):
