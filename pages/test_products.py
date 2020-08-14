@@ -18,6 +18,7 @@ class productObjects:
     prod_photo = (By.XPATH, "//*[@id='product_image']")
     prod_descript = (By.XPATH, "//*[@id='tinymce']")
     check_newsave = (By.XPATH, "//*[@id='successmessage']")
+    delete_newsave = (By.XPATH, "//tbody/tr[4]/td/a[2]")
 
     def __init__(self, browser):
         self.browser = browser
@@ -28,19 +29,21 @@ class productObjects:
 
     @allure.step('Check if Product tab has loaded')
     def check_product_loaded(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Product_Tab_Loaded',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.product_load)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Checking if Add Button Exists')
     def check_add_btn(self):
         try:
             self.browser.find_element(*self.add_prod_btn).click()
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Enter Title in Textbox')
     def add_product_title(self, prod_change):
@@ -63,29 +66,39 @@ class productObjects:
 
     @allure.step('Add product text')
     def enter_prod_description(self, PDescription):
-        try:
             # self.browser.find_element(*self.comp_close).click()
             iframe = self.browser.find_element_by_id('product_description_ifr')
             self.browser.switch_to.frame(iframe)
             self.browser.find_element(*self.prod_descript).clear()
             self.browser.find_element(*self.prod_descript).send_keys(PDescription)
             self.browser.switch_to.default_content()
-            assert True
-        except:
-            assert False
 
     @allure.step('Click to save Product')
     def save_new_product(self):
-        try:
+            allure.attach(self.browser.get_screenshot_as_png(), name='Product_Details_Added',
+                      attachment_type=allure.attachment_type.PNG)
             self.browser.find_element(*self.prod_save).click()
-            assert True
-        except:
-            assert False
 
     @allure.step('Check if product is saved')
     def check_new_product(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Product_Saved',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_newsave)
-            assert True
+            return True
         except:
-            assert False
+            return False
+
+    @allure.step('Delete Product')
+    def delete_new_product(self):
+        self.browser.find_element(*self.delete_newsave).click()
+
+    @allure.step('Check if product is Deleted')
+    def check_deleted_product(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Product_Deleted',
+                      attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.check_newsave)
+            return False
+        except:
+            return True

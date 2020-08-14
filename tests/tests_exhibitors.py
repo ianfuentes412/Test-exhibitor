@@ -87,6 +87,7 @@ def test_banner_page(browser):
     banner_page.delete_banner_btn()
     assert banner_page.check_deleted_banner() == True, "Banner was not Deleted"
 
+
 # @allure.title('Checking Preview Tab')
 # def test_preview_page(browser):
 # preview_page = previewObjects(browser)
@@ -94,18 +95,20 @@ def test_banner_page(browser):
 # preview_page.check_preview_loaded()
 # preview_page.check_book_element1()
 
-# @allure.title('Checking Products Tab')
-# def test_product_page(browser):
-# product_page = productObjects(browser)
-# product_page.enter_product()
-# product_page.check_product_loaded()
-# product_page.check_add_btn()
-# product_page.add_product_title(demo_prod_title)
-# product_page.add_product_link(demo_prod_link)
-# product_page.add_product_image()
-# product_page.enter_prod_description(demo_comp_description)
-# product_page.save_new_product()
-# product_page.check_new_product()
+@allure.title('Checking Products Tab')
+def test_product_page(browser):
+    product_page = productObjects(browser)
+    product_page.enter_product()
+    assert product_page.check_product_loaded() == True, "Product page is not Loaded"
+    assert product_page.check_add_btn() == True, "Add Button is not Loaded"
+    product_page.add_product_title(demo_prod_title)
+    product_page.add_product_link(demo_prod_link)
+    product_page.add_product_image()
+    product_page.enter_prod_description(demo_comp_description)
+    product_page.save_new_product()
+    assert product_page.check_new_product() == True, "Product has not been added"
+    product_page.delete_new_product()
+    assert product_page.check_deleted_product() == True, "Product was not Deleted"
 
 # @allure.title('Checking Prizes Tab')
 # def test_prizes_page(browser):
