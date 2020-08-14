@@ -34,7 +34,11 @@ class announceObjects:
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Tab Loaded',
                       attachment_type=allure.attachment_type.PNG)
-        return self.browser.find_element(*self.loaded_ann)
+        try:
+            self.browser.find_element(*self.loaded_ann)
+            return True
+        except:
+            return False
 
 
     @allure.step('Clicking Add Announcement')
