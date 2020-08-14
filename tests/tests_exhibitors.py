@@ -56,19 +56,19 @@ def test_help_page(browser):
     help_page.click_dropdown4()
     assert "Lorem ipsum" in help_page.check_dropdown4(), "Text did not display in dropdown 4"
 
-#@allure.title('Checking Announcements Tab')
-#def test_announcement_page(browser):
-    #announce_page = announceObjects(browser)
-    #announce_page.enter_announce()
-    #announce_page.check_announce_load()
+@allure.title('Checking Announcements Tab')
+def test_announcement_page(browser):
+    announce_page = announceObjects(browser)
+    announce_page.enter_announce()
+    announce_page.check_announce_load()
 
-    #announce_page.add_new_announce()
+    announce_page.add_new_announce()
 
-    #announce_page.click_ann_edit()
-    #announce_page.edit_announcement(demo2_announce)
-    #announce_page.saveupdated_announcement()
-    #announce_page.check_ann_change2()
-    #announce_page.delete_ann()
+    announce_page.click_ann_edit()
+    announce_page.edit_announcement(demo2_announce)
+    announce_page.saveupdated_announcement()
+    announce_page.check_ann_change2()
+    announce_page.delete_ann()
 
 #@allure.title('Checking Banner Tab')
 #def test_banner_page(browser):

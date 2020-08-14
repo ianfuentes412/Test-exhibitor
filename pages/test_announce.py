@@ -31,6 +31,8 @@ class announceObjects:
 
     @allure.step('Checking If Announcement Loaded')
     def check_announce_load(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Tab Loaded',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.loaded_ann)
             assert True
