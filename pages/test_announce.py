@@ -108,7 +108,7 @@ class announceObjects:
                 self.savenew_announcement()
                 self.check_ann_created()
         except NoSuchElementException:
-                print("Announcement already done")
+            print("Announcement already done")
 
     @allure.step('Check if Announcement is deleted')
     def check_ann_delete(self):
