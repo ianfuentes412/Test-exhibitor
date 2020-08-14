@@ -27,37 +27,37 @@ class helpObjects:
     def enter_help(self):
         self.browser.find_element(*self.help_btn).click()
 
-    @allure.step('Checking Title 1')
+    @allure.step('Checking Dropdown 1')
     def check_dropdown1(self):
-        return self.browser.find_element(*self.find_test1).text
+        return self.browser.find_element(*self.find_test1).text()
 
 
-    @allure.step('Checking Title 2')
+    @allure.step('Checking Dropdown 2')
     def check_dropdown2(self):
-        return self.browser.find_element(*self.find_test2).text
+        return self.browser.find_element(*self.find_test2).text()
 
 
-    @allure.step('Checking Title 3')
+    @allure.step('Checking Dropdown 3')
     def check_dropdown3(self):
-            return self.browser.find_element(*self.find_test3).text
+            return self.browser.find_element(*self.find_test3).text()
 
-    @allure.step('Checking Title 4')
+    @allure.step('Checking Dropdown 4')
     def check_dropdown4(self):
-            return self.browser.find_element(*self.find_test4).text
+            return self.browser.find_element(*self.find_test4).text()
 
 
-    @allure.step('Checking if dropdown 1 works')
+    @allure.step('Clicking dropdown 1 works')
     def click_dropdown1(self):
         self.browser.find_element(*self.dropdown1).click()
 
-    @allure.step('Checking if dropdown 2 works')
+    @allure.step('Clicking dropdown 2 works')
     def click_dropdown2(self):
         self.browser.find_element(*self.dropdown2).click()
 
-    @allure.step('Checking if dropdown 3 works')
+    @allure.step('Clicking dropdown 3 works')
     def click_dropdown3(self):
         self.browser.find_element(*self.dropdown3).click()
 
-    @allure.step('Checking if dropdown 4 works')
+    @allure.step('Clicking dropdown 4 works')
     def click_dropdown4(self):
         self.browser.find_element(*self.dropdown4).click()
