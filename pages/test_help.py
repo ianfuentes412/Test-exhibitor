@@ -13,7 +13,7 @@ class helpObjects:
     dropdown2 = (By.XPATH, "//*[@id='accordion']/div[2]/a")
     dropdown3 = (By.XPATH, "//*[@id='accordion']/div[3]/a")
     dropdown4 = (By.XPATH, "//*[@id='accordion']/div[4]/a")
-    find_test1 = (By.XPATH, "//*[@id='accordion']/div[1]/a/h6")
+    find_test1 = (By.XPATH, "//*[@id='accordion-item-1']/div/p[1]")
     find_test2 = (By.XPATH, "//*[@id='accordion']/div[2]/a/h6")
     find_test3 = (By.XPATH, "//*[@id='accordion']/div[3]/a/h6")
     find_test4 = (By.XPATH, "//*[@id='accordion']/div[4]/a/h6")
