@@ -71,9 +71,9 @@ def test_announcement_page(browser):
     announce_page.click_ann_edit()
     announce_page.edit_announcement(demo2_announce)
     announce_page.saveupdated_announcement()
-    assert announce_page.check_ann_change() == True, "Annoucement Page is not changed"
+    announce_page.check_ann_change()
     announce_page.delete_ann()
-    assert announce_page.check_ann_delete() == True, "Announcement Page is not deleted"
+    announce_page.check_ann_delete()
 
 # @allure.title('Checking Banner Tab')
 # def test_banner_page(browser):

@@ -88,8 +88,11 @@ class announceObjects:
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Changed',
                       attachment_type=allure.attachment_type.PNG)
-        return self.browser.find_element(*self.check_change2)
-
+        try:
+            self.browser.find_element(*self.check_change2)
+            assert True
+        except:
+            assert False
 
     @allure.step('Adds a new Announcement')
     def add_new_announce(self):
@@ -109,4 +112,8 @@ class announceObjects:
         time.sleep(1)
         allure.attach(self.browser.get_screenshot_as_png(), name='Announcement Deleted',
                           attachment_type=allure.attachment_type.PNG)
-        return self.browser.find_element(*self.check_change2)
+        try:
+            self.browser.find_element(*self.check_change2)
+            assert False
+        except:
+            assert True
