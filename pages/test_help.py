@@ -9,7 +9,7 @@ import allure
 
 class helpObjects:
 
-    dropdown1 = (By.XPATH, "//*[@id='accordion']/div[1]/a")
+    dropdown1 = (By.XPATH, "//*[@id='accordion']/div[1]/a/h6")
     dropdown2 = (By.XPATH, "//*[@id='accordion']/div[2]/a")
     dropdown3 = (By.XPATH, "//*[@id='accordion']/div[3]/a")
     dropdown4 = (By.XPATH, "//*[@id='accordion']/div[4]/a")
