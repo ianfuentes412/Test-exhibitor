@@ -34,6 +34,7 @@ demo_prod_link = "https://google.ca"
 demo_pri_title = "Mitsubishi Lancer"
 demo_pri_link = "https://google.ca"
 demo_pri_message = "Thank you for Participating!"
+demo_pri_description = "This is created text for the description. Thank you for Testing!"
 
 #Company Info
 demo_comp_title = "easyRegister"

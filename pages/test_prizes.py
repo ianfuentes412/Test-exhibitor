@@ -20,6 +20,8 @@ class prizesObjects:
     pri_descript = (By.XPATH, "//*[@id='tinymce']")
     pri_save = (By.XPATH, "//button[@id='save']")
     check_newprize = (By.XPATH, "//*[@id='createdmessage']")
+    edit_prizes_btn = (By.XPATH, "//*[@id='prizelist']/tbody//tr[1]//td[1]//a[1]")
+
 
     def __init__(self, browser):
         self.browser = browser
@@ -76,8 +78,8 @@ class prizesObjects:
             photo_path = path + "\\banner.jpg"
         self.browser.find_element(*self.pri_photo).send_keys(photo_path)
 
-    @allure.step('Add Message in Prizes')
-    def add_prizes_message(self, PriDescription):
+    @allure.step('Add Description in Prizes Textbox')
+    def add_prizes_description(self, PriDescription):
         try:
             # self.browser.find_element(*self.comp_close).click()
             iframe = self.browser.find_element_by_id('prize_description_ifr')
@@ -92,12 +94,28 @@ class prizesObjects:
     @allure.step('Click to save Prize')
     def save_new_prizes(self):
         self.browser.find_element(*self.pri_save).click()
-        time.sleep(2)
+        time.sleep(1)
 
     @allure.step('Check if prize is saved')
     def check_new_prizes(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='New_Prizes',
+                      attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_newprize)
             assert True
         except:
             assert False
+
+    @allure.step('Click Edit Button')
+    def edit_prizes(self):
+        self.browser.find_element(*self.edit_prizes_btn).click()
+
+    @allure.step('Check if Edit form is loaded')
+    def check_edit_prize(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Prizes_Edit_Form',
+                      attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.pri_title)
+            return True
+        except:
+            return False
