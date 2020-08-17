@@ -38,6 +38,8 @@ class compObjects:
 
     comp_saveadd = (By.XPATH,"//*[@id='save']")
 
+    comp_update_check = (By.XPATH,"//*[@id='successinfoupdate']")
+
     def __init__(self, browser):
         self.browser = browser
 
@@ -200,8 +202,14 @@ class compObjects:
 
     @allure.step('Click to save Company Information Changes')
     def click_savecompinfo(self):
-        try:
             self.browser.find_element(*self.comp_saveadd).click()
-            assert True
+
+    @allure.step('Checks if Information is changed')
+    def check_info_updated(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Updated_CompInfo',
+                      attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.comp_update_check)
+            return True
         except:
-            assert False
+            return False

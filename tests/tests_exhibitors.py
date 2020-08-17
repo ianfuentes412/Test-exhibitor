@@ -169,6 +169,8 @@ def test_company_page(browser):
 
     comp_page.click_logotab()
     comp_page.upload_photo()
+    comp_page.click_savecompinfo()
+    assert comp_page.check_info_updated() == True, "Info was not saved"
 
 # @allure.title('To check if login succeedes with valid credentials (Failed intentionally)')
 # def test_login_valid_failed(browser):
