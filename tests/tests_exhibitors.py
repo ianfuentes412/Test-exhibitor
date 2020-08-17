@@ -141,7 +141,7 @@ def test_prizes_page(browser):
     prizes_page.check_edited_prize()
 
     prizes_page.delete_prizes()
-    assert prizes_page.check_deletedprize() == True, "Prize was not Deleted"
+    assert prizes_page.check_deleted_prize() == True, "Prize was not Deleted"
 
 # @allure.title('Checking Company Info Tab')
 # def test_company_page(browser):
