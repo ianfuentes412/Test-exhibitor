@@ -90,12 +90,13 @@ def test_banner_page(browser):
 
 @allure.title('Checking Preview Tab')
 def test_preview_page(browser):
- preview_page = previewObjects(browser)
- preview_page.enter_preview()
- assert preview_page.check_preview_loaded() == True, "Preview Page was not Loaded"
- assert preview_page.check_book_element1() == True, "Elements were not Loaded"
- assert preview_page.check_chat_btn() == True, "Chat Button was not Working"
- assert preview_page.check_appoint_btn() == True, "Appointment Button was not Working"
+    preview_page = previewObjects(browser)
+    preview_page.enter_preview()
+    assert preview_page.check_preview_loaded() == True, "Preview Page was not Loaded"
+    assert preview_page.check_book_element1() == True, "Elements were not Loaded"
+    assert preview_page.check_chat_btn() == True, "Chat Button was not Working"
+    assert preview_page.check_appoint_btn() == True, "Appointment Button was not Working"
+
 
 @allure.title('Checking Products Tab')
 def test_product_page(browser):
@@ -112,20 +113,29 @@ def test_product_page(browser):
     product_page.delete_new_product()
     assert product_page.check_deleted_product() == True, "Product was not Deleted"
 
+
 @allure.title('Checking Prizes Tab')
 def test_prizes_page(browser):
- prizes_page = prizesObjects(browser)
- prizes_page.enter_prizes()
- prizes_page.check_prize_loaded()
- prizes_page.prize_click_add_btn()
- prizes_page.add_prizes_title(demo_pri_title)
- prizes_page.add_prizes_link(demo_pri_link)
- prizes_page.add_prizes_message(demo_pri_message)
- prizes_page.add_prizes_type()
- prizes_page.add_prizes_image()
- prizes_page.add_prizes_description(demo_comp_description)
- prizes_page.save_new_prizes()
- prizes_page.check_new_prizes()
+    prizes_page = prizesObjects(browser)
+    prizes_page.enter_prizes()
+    prizes_page.check_prize_loaded()
+    prizes_page.prize_click_add_btn()
+    prizes_page.add_prizes_title(demo_pri_title)
+    prizes_page.add_prizes_link(demo_pri_link)
+    prizes_page.add_prizes_message(demo_pri_message)
+    prizes_page.add_prizes_type()
+    prizes_page.add_prizes_image()
+    prizes_page.add_prizes_description(demo_comp_description)
+    prizes_page.save_new_prizes()
+    prizes_page.check_new_prizes()
+
+    prizes_page.edit_prizes()
+    assert prizes_page.check_edit_prize() == True, "Edit button was not found"
+    prizes_page.add_prizes_title(demo_pri_edit_title)
+    prizes_page.add_prizes_link(demo_pri_edit_link)
+    prizes_page.add_prizes_message(demo_pri_edit_message)
+    prizes_page.add_prizes_description(demo_pri_edit_desc)
+    prizes_page.edit_prizes_type()
 
 # @allure.title('Checking Company Info Tab')
 # def test_company_page(browser):

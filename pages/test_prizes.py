@@ -17,6 +17,7 @@ class prizesObjects:
     pri_message = (By.XPATH, "//*[@id='prize_message']")
     pri_photo = (By.XPATH, "//*[@id='prize_image']")
     prize_type = (By.XPATH, "//*[@id='formnew']/div[6]/div[2]/label")
+    prize_type2 = (By.XPATH, "//*[@id='formedit']/div[6]/div[3]/label")
     pri_descript = (By.XPATH, "//*[@id='tinymce']")
     pri_save = (By.XPATH, "//button[@id='save']")
     check_newprize = (By.XPATH, "//*[@id='createdmessage']")
@@ -119,3 +120,8 @@ class prizesObjects:
             return True
         except:
             return False
+
+    @allure.step('Change the type of Prize')
+    def edit_prizes_type(self):
+        self.browser.find_element(*self.prize_type2).click()
+

@@ -36,6 +36,11 @@ demo_pri_link = "https://google.ca"
 demo_pri_message = "Thank you for Participating!"
 demo_pri_description = "This is created text for the description. Thank you for Testing!"
 
+demo_pri_edit_title = "Toyota Camry"
+demo_pri_edit_link = "https://gmail.com"
+demo_pri_edit_desc = "This is made to check if the edit is created. Thank you!"
+demo_pri_edit_message = "The draw is now closed! Thank you!"
+
 #Company Info
 demo_comp_title = "easyRegister"
 demo_comp_fname = "Marts"
