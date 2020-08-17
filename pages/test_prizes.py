@@ -132,9 +132,9 @@ class prizesObjects:
     def change_prizes_image(self):
         path = os.getcwd()
         if os.name == "posix":
-            photo_path = path + "/changed_prize.jpg"
+            photo_path = path + "/resources/changed_prize.jpg"
         else:
-            photo_path = path + "\\changed_prize.jpg"
+            photo_path = path + "\\resources\\changed_prize.jpg"
         self.browser.find_element(*self.pri_photo).send_keys(photo_path)
 
     @allure.step('Check if prize is updated')
