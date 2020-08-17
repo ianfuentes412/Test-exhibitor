@@ -127,7 +127,7 @@ def test_prizes_page(browser):
     prizes_page.add_prizes_image()
     prizes_page.add_prizes_description(demo_comp_description)
     prizes_page.save_new_prizes()
-    prizes_page.check_new_prizes()
+    assert prizes_page.check_new_prizes() == True, "Prize was not added"
 
     prizes_page.edit_prizes()
     assert prizes_page.check_edit_prize() == True, "Edit button was not found"
@@ -136,6 +136,12 @@ def test_prizes_page(browser):
     prizes_page.add_prizes_message(demo_pri_edit_message)
     prizes_page.add_prizes_description(demo_pri_edit_desc)
     prizes_page.edit_prizes_type()
+    prizes_page.change_prizes_image()
+    prizes_page.save_new_prizes()
+    prizes_page.check_edited_prize()
+
+    prizes_page.delete_prizes()
+    assert prizes_page.check_deletedprize() == True, "Prize was not Deleted"
 
 # @allure.title('Checking Company Info Tab')
 # def test_company_page(browser):

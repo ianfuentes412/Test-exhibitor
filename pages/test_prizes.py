@@ -22,6 +22,9 @@ class prizesObjects:
     pri_save = (By.XPATH, "//button[@id='save']")
     check_newprize = (By.XPATH, "//*[@id='createdmessage']")
     edit_prizes_btn = (By.XPATH, "//*[@id='prizelist']/tbody//tr[1]//td[1]//a[1]")
+    check_editprize = (By.XPATH, "//*[@id='updatemessage']")
+    pri_delete = (By.XPATH, "//*//*[@id='prizelist']/tbody/tr[3]/td[1]/a[2]")
+    check_deletedprize= (By.XPATH, "//*[@id='successdelete']")
 
 
     def __init__(self, browser):
@@ -103,9 +106,9 @@ class prizesObjects:
                       attachment_type=allure.attachment_type.PNG)
         try:
             self.browser.find_element(*self.check_newprize)
-            assert True
+            return True
         except:
-            assert False
+            return False
 
     @allure.step('Click Edit Button')
     def edit_prizes(self):
@@ -125,3 +128,36 @@ class prizesObjects:
     def edit_prizes_type(self):
         self.browser.find_element(*self.prize_type2).click()
 
+    @allure.step('Change Picture in Prizes')
+    def change_prizes_image(self):
+        path = os.getcwd()
+        if os.name == "posix":
+            photo_path = path + "/changed_prize.jpg"
+        else:
+            photo_path = path + "\\changed_prize.jpg"
+        self.browser.find_element(*self.pri_photo).send_keys(photo_path)
+
+    @allure.step('Check if prize is updated')
+    def check_edited_prize(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Changed_Prizes',
+                      attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.check_editprize)
+            return True
+        except:
+            return False
+
+    @allure.step('Click to delete Prize')
+    def delete_prizes(self):
+        self.browser.find_element(*self.pri_delete).click()
+        time.sleep(1)
+
+    @allure.step('Check if prize is deleted')
+    def check_deleted_prize(self):
+        allure.attach(self.browser.get_screenshot_as_png(), name='Deleted_Prize',
+                      attachment_type=allure.attachment_type.PNG)
+        try:
+            self.browser.find_element(*self.check_deletedprize)
+            return True
+        except:
+            return False
